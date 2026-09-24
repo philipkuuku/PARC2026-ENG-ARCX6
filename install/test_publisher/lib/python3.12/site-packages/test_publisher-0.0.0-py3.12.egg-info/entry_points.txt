@@ -1,0 +1,2 @@
+[console_scripts]
+move_robot = test_publisher.robot_publisher:main

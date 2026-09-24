@@ -1,0 +1,35 @@
+running egg_info
+creating ../../../build/test_publisher/test_publisher.egg-info
+writing ../../../build/test_publisher/test_publisher.egg-info/PKG-INFO
+writing dependency_links to ../../../build/test_publisher/test_publisher.egg-info/dependency_links.txt
+writing entry points to ../../../build/test_publisher/test_publisher.egg-info/entry_points.txt
+writing requirements to ../../../build/test_publisher/test_publisher.egg-info/requires.txt
+writing top-level names to ../../../build/test_publisher/test_publisher.egg-info/top_level.txt
+writing manifest file '../../../build/test_publisher/test_publisher.egg-info/SOURCES.txt'
+reading manifest file '../../../build/test_publisher/test_publisher.egg-info/SOURCES.txt'
+writing manifest file '../../../build/test_publisher/test_publisher.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build
+creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib
+creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher
+copying test_publisher/__init__.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher
+copying test_publisher/robot_publisher.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher
+running install
+running install_lib
+creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher
+copying /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher/__init__.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher
+copying /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher/robot_publisher.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher
+byte-compiling /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher/robot_publisher.py to robot_publisher.cpython-312.pyc
+running install_data
+creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index
+creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index/resource_index
+creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index/resource_index/packages
+copying resource/test_publisher -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index/resource_index/packages
+copying package.xml -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher
+running install_egg_info
+Copying ../../../build/test_publisher/test_publisher.egg-info to /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher-0.0.0-py3.12.egg-info
+running install_scripts
+Installing move_robot script to /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/test_publisher
+writing list of installed files to '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/install.log'

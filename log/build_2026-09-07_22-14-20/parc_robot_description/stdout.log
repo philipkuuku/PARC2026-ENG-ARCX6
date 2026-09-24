@@ -1,0 +1,61 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found urdf: 2.10.0 (/opt/ros/jazzy/share/urdf/cmake)
+-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+-- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)
+-- Configuring done (1.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description
+-- Install configuration: ""
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/launch
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/launch/description.launch.py
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/launch/robot_state_publisher.launch.py
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/right_wheel.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/rplidarc1.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/sitoe_chassis_top.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/left_wheel.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/sitoe_chassis_bottom.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/realsense_d435_top.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/realsense_d435_bottom.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/meshes/caster_wheel.dae
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/rviz
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/rviz/description.rviz
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/rplidar_c1.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/depth_cameras.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/sitoe_robot.sdf
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/inertial_macros.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/d435.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/sitoe_robot.urdf
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/gz_control.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/sitoe_core.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/sitoe_robot.urdf.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/urdf/imu.xacro
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/ament_index/resource_index/package_run_dependencies/parc_robot_description
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/ament_index/resource_index/parent_prefix_path/parc_robot_description
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/environment/ament_prefix_path.sh
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/environment/ament_prefix_path.dsv
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/environment/path.sh
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/environment/path.dsv
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/local_setup.bash
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/local_setup.sh
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/local_setup.zsh
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/local_setup.dsv
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.dsv
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/ament_index/resource_index/packages/parc_robot_description
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/cmake/parc_robot_descriptionConfig.cmake
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/cmake/parc_robot_descriptionConfig-version.cmake
+-- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.xml

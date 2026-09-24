@@ -4,8 +4,8 @@
 source /opt/ros/jazzy/setup.bash   # change 'humble' to your distro if different
 
 # --- base navigation / sourcing ---
-alias rd='cd ~/ros_ws'                          # go to workspace root
-alias sr='source ~/ros_ws/install/setup.bash'   # source workspace overlay
+alias rd='cd ~/parc_main/PARC2026-ENG-ARCX6/ros2_ws'                          # go to workspace root
+alias sr='source ~/parc_main/PARC2026-ENG-ARCX6/ros2_ws/install/setup.bash'   # source workspace overlay
 
 # --- build aliases ---
 alias cb='rd && colcon build && sr'                              # build whole workspace

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="sitoe_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="sitoe_core.xacro"/>
+  <xacro:include filename="gz_control.xacro"/>
+  <xacro:include filename="depth_cameras.xacro"/>
+  <xacro:include filename="imu.xacro"/>
+  <xacro:include filename="rplidar_c1.xacro"/>
+
+</robot>

@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<sdf version='1.10'>
+  <world name='task'>
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <plugin
+      filename="gz-sim-imu-system"
+      name="gz::sim::systems::Imu">
+    </plugin>
+
+    <plugin
+      filename="gz-sim-contact-system"
+      name="gz::sim::systems::Contact">
+    </plugin>
+
+    <model name='ground_plane'>
+        <static>true</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <plane>
+                <normal>0 0 1</normal>
+                <size>100 100</size>
+              </plane>
+            </geometry>
+            <surface>
+              <friction>
+                <ode/>
+              </friction>
+              <bounce/>
+              <contact/>
+            </surface>
+          </collision>
+          <visual name='visual'>
+            <geometry>
+              <plane>
+                <normal>0 0 1</normal>
+                <size>100 100</size>
+              </plane>
+            </geometry>
+            <material>
+              <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+              <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+              <specular>0.800000012 0.800000012 0.800000012 1</specular>
+            </material>
+          </visual>
+          <pose>0 0 0 0 0 0</pose>
+          <inertial>
+            <pose>0 0 0 0 0 0</pose>
+            <mass>1</mass>
+            <inertia>
+              <ixx>1</ixx>
+              <ixy>0</ixy>
+              <ixz>0</ixz>
+              <iyy>1</iyy>
+              <iyz>0</iyz>
+              <izz>1</izz>
+            </inertia>
+          </inertial>
+          <enable_wind>false</enable_wind>
+        </link>
+        <pose>0 0 0 0 0 0</pose>
+        <self_collide>false</self_collide>
+      </model>
+      <include>
+        <uri>model://cafe</uri>
+        <name>cafe</name>
+        <pose>0.10103700309991837 0.7987939715385437 0.022928904742002487 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://cafe_table</uri>
+        <name>cafe_table_0</name>
+        <pose>1.9141600131988525 -1.3701871633529663 0.21456600725650787 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://cafe_table</uri>
+        <name>cafe_table_1</name>
+        <pose>-0.15233904123306274 -2.9603400230407715 0.2182919979095459 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://cafe_table</uri>
+        <name>cafe_table_4</name>
+        <pose>-0.26480200886726379 0.55609148740768433 0.21968699991703033 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://cafe_table</uri>
+        <name>cafe_table_6</name>
+        <pose>-2.1222701072692871 -1.3351857662200928 0.21361799538135529 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://cafe_table</uri>
+        <name>cafe_table_7</name>
+        <pose>-2.1722400188446045 -5.0545501708984375 0.22407099604606628 0 0 0.0062432602893310709</pose>
+      </include>
+      <include>
+        <uri>model://cafe_table</uri>
+        <name>cafe_table_9</name>
+        <pose>2.0039401054382324 -5.0513825416564941 0.21439400315284729 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://VendingMachine</uri>
+        <name>VendingMachine</name>
+        <pose>3.7178487777709961 1.0160986185073853 0.16100099682807922 0 0 -3.1141199992159638</pose>
+      </include>
+      <include>
+        <uri>model://breakfast_menu</uri>
+        <name>breakfast_menu</name>
+        <pose>1.8951636552810669 -1.6988500356674194 0.9896780252456665 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://breakfast_menu</uri>
+        <name>breakfast_menu_0</name>
+        <pose>-0.25599858164787298 0.88698261976242065 0.99630999565124512 0 0 -3.1382199999716058</pose>
+      </include>
+      <include>
+        <uri>model://breakfast_menu</uri>
+        <name>breakfast_menu_2</name>
+        <pose>-2.2029576301574711 -4.7750854492187482 0.99922901391983032 0 0 3.1411900000053885</pose>
+      </include>
+      <include>
+        <uri>model://FemaleVisitor</uri>
+        <name>FemaleVisitor</name>
+        <pose>2.7404100894927979 0.92284101247787476 0.37775665521621704 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://WoodenChair</uri>
+        <name>WoodenChair</name>
+        <pose>-2.2265667915344238 -4.3935337066650391 0.21541899442672729 0 0 -1.538859965939805</pose>
+      </include>
+      <include>
+        <uri>model://MaleVisitorSit</uri>
+        <name>MaleVisitorSit</name>
+        <pose>-4.3872251510620117 -3.0689578056335449 0.57878297567367554 0 0 1.5051900721710589</pose>
+      </include>
+      <include>
+        <uri>model://FemaleVisitorSit</uri>
+        <name>FemaleVisitorSit</name>
+        <pose>-2.2398481369018555 -4.3909134864807129 0.21860399842262268 0 0 0.011338099886587056</pose>
+      </include>
+      <include>
+        <uri>model://WoodenChair</uri>
+        <name>WoodenChair_0</name>
+        <pose>1.9475767612457275 -1.7354404926300049 0.213251993060112 0 0 1.5609700023972248</pose>
+      </include>
+      <include>
+        <uri>model://WoodenChair</uri>
+        <name>WoodenChair_2</name>
+        <pose>-0.25083082914352417 0.9120781421661377 0.21394400298595428 0 0 -1.5514799573912641</pose>
+      </include>
+      <include>
+        <uri>model://WoodenChair</uri>
+        <name>WoodenChair_3</name>
+        <pose>-0.55429303646087646 -2.9439499378204346 0.2164669930934906 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://WoodenChair</uri>
+        <name>WoodenChair_4</name>
+        <pose>-2.463878870010376 -1.2893500328063965 0.21502700448036194 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://WoodenChair</uri>
+        <name>WoodenChair_5</name>
+        <pose>1.6594259738922119 -5.0773301124572754 0.21968099474906921 0 0 0</pose>
+      </include>
+      <light name='sun' type='directional'>
+        <pose>0 0 10 0 0 0</pose>
+        <cast_shadows>true</cast_shadows>
+        <intensity>1</intensity>
+        <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+        <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+        <specular>0.200000003 0.200000003 0.200000003 1</specular>
+        <attenuation>
+          <range>1000</range>
+          <linear>0.01</linear>
+          <constant>0.90000000000000002</constant>
+          <quadratic>0.001</quadratic>
+        </attenuation>
+        <spot>
+          <inner_angle>0</inner_angle>
+          <outer_angle>0</outer_angle>
+          <falloff>0</falloff>
+        </spot>
+      </light>
+    </world>
+  </sdf>

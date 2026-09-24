@@ -1,0 +1,37 @@
+[1.496s] Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/test_publisher': PYTHONPATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/test_publisher build --build-base /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build install --record /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/install.log --single-version-externally-managed install_data
+[1.908s] running egg_info
+[1.908s] creating ../../../build/test_publisher/test_publisher.egg-info
+[1.939s] writing ../../../build/test_publisher/test_publisher.egg-info/PKG-INFO
+[1.939s] writing dependency_links to ../../../build/test_publisher/test_publisher.egg-info/dependency_links.txt
+[1.940s] writing entry points to ../../../build/test_publisher/test_publisher.egg-info/entry_points.txt
+[1.940s] writing requirements to ../../../build/test_publisher/test_publisher.egg-info/requires.txt
+[1.940s] writing top-level names to ../../../build/test_publisher/test_publisher.egg-info/top_level.txt
+[1.940s] writing manifest file '../../../build/test_publisher/test_publisher.egg-info/SOURCES.txt'
+[2.002s] reading manifest file '../../../build/test_publisher/test_publisher.egg-info/SOURCES.txt'
+[2.003s] writing manifest file '../../../build/test_publisher/test_publisher.egg-info/SOURCES.txt'
+[2.003s] running build
+[2.003s] running build_py
+[2.004s] creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build
+[2.004s] creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib
+[2.004s] creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher
+[2.004s] copying test_publisher/__init__.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher
+[2.004s] copying test_publisher/robot_publisher.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher
+[2.004s] running install
+[2.014s] running install_lib
+[2.043s] creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher
+[2.043s] copying /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher/__init__.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher
+[2.043s] copying /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build/lib/test_publisher/robot_publisher.py -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher
+[2.043s] byte-compiling /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher/__init__.py to __init__.cpython-312.pyc
+[2.044s] byte-compiling /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher/robot_publisher.py to robot_publisher.cpython-312.pyc
+[2.044s] running install_data
+[2.045s] creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index
+[2.045s] creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index/resource_index
+[2.045s] creating /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index/resource_index/packages
+[2.045s] copying resource/test_publisher -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/ament_index/resource_index/packages
+[2.045s] copying package.xml -> /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher
+[2.045s] running install_egg_info
+[2.077s] Copying ../../../build/test_publisher/test_publisher.egg-info to /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages/test_publisher-0.0.0-py3.12.egg-info
+[2.079s] running install_scripts
+[2.288s] Installing move_robot script to /home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/test_publisher
+[2.288s] writing list of installed files to '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/install.log'
+[2.347s] Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/test_publisher' returned '0': PYTHONPATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/test_publisher build --build-base /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build install --record /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/install.log --single-version-externally-managed install_data

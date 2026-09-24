@@ -1,0 +1,366 @@
+[0.180s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.180s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7b7a21b3b470>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b7a21cbfd40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b7a21cbfd40>>, mixin_verb=('build',))
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.231s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jachin/parc_main/PARC2026-ENG-ARCX6'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore_ament_install'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_pkg']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_pkg'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_meta']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_meta'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ros']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ros'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['cmake', 'python']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'cmake'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['python_setup_py']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python_setup_py'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore_ament_install'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_pkg']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_meta']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_meta'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ros']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ros'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['cmake', 'python']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'cmake'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['python_setup_py']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python_setup_py'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/build) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/build) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/install) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/install) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/log) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/log) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot) by extension 'ros'
+[0.269s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/parc_robot' with type 'ros.ament_cmake' and name 'parc_robot'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_bringup) by extension 'ros'
+[0.270s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/parc_robot_bringup' with type 'ros.ament_cmake' and name 'parc_robot_bringup'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/parc_robot_description) by extension 'ros'
+[0.271s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/parc_robot_description' with type 'ros.ament_cmake' and name 'parc_robot_description'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'cmake'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'python'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extensions ['python_setup_py']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/resources) by extension 'python_setup_py'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/test_publisher) by extension 'ros'
+[0.273s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/test_publisher' with type 'ros.ament_python' and name 'test_publisher'
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.295s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.295s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.297s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/jachin/ros2_ws/install
+[0.300s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 392 installed packages in /opt/ros/jazzy
+[0.302s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'cmake_target' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'cmake_clean_first' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'cmake_force_configure' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'ament_cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.367s] DEBUG:colcon.colcon_core.verb:Building package 'parc_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot', 'merge_install': False, 'path': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot', 'symlink_install': False, 'test_result_base': None}
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'cmake_target' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.367s] DEBUG:colcon.colcon_core.verb:Building package 'parc_robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description', 'merge_install': False, 'path': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_description', 'symlink_install': False, 'test_result_base': None}
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'cmake_target' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'test_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.368s] DEBUG:colcon.colcon_core.verb:Building package 'test_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher', 'merge_install': False, 'path': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/test_publisher', 'symlink_install': False, 'test_result_base': None}
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'parc_robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.368s] DEBUG:colcon.colcon_core.verb:Building package 'parc_robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup', 'merge_install': False, 'path': '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.369s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.370s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.370s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_description' with build type 'ament_cmake'
+[0.370s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_description'
+[0.373s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.373s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.373s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.378s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot' with build type 'ament_cmake'
+[0.379s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot'
+[0.379s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.379s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.384s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/test_publisher' with build type 'ament_python'
+[0.384s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_publisher', 'ament_prefix_path')
+[0.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/hook/ament_prefix_path.ps1'
+[0.386s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/hook/ament_prefix_path.dsv'
+[0.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/hook/ament_prefix_path.sh'
+[0.388s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.388s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_description -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description
+[0.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot
+[0.824s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/test_publisher'
+[0.825s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.825s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot
+[1.738s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot -- -j12 -l12
+[1.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot -- -j12 -l12
+[1.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot
+[1.843s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_description -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description
+[1.844s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description -- -j12 -l12
+[1.861s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parc_robot)
+[1.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot
+[1.865s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot' for CMake module files
+[1.865s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot' for CMake config files
+[1.865s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot', 'cmake_prefix_path')
+[1.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/hook/cmake_prefix_path.ps1'
+[1.866s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/hook/cmake_prefix_path.dsv'
+[1.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/hook/cmake_prefix_path.sh'
+[1.867s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/bin'
+[1.867s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/lib/pkgconfig/parc_robot.pc'
+[1.867s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/lib/python3.12/site-packages'
+[1.868s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/bin'
+[1.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.ps1'
+[1.869s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.dsv'
+[1.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.sh'
+[1.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.bash'
+[1.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.zsh'
+[1.871s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/colcon-core/packages/parc_robot)
+[1.872s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parc_robot)
+[1.872s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot' for CMake module files
+[1.873s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot' for CMake config files
+[1.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot', 'cmake_prefix_path')
+[1.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/hook/cmake_prefix_path.ps1'
+[1.874s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/hook/cmake_prefix_path.dsv'
+[1.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/hook/cmake_prefix_path.sh'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/bin'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/lib/pkgconfig/parc_robot.pc'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/lib/python3.12/site-packages'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/bin'
+[1.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.ps1'
+[1.876s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.dsv'
+[1.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.sh'
+[1.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.bash'
+[1.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/parc_robot/package.zsh'
+[1.878s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot/share/colcon-core/packages/parc_robot)
+[1.881s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/test_publisher': PYTHONPATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/test_publisher build --build-base /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build install --record /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/install.log --single-version-externally-managed install_data
+[1.915s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description -- -j12 -l12
+[1.917s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description
+[2.034s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parc_robot_description)
+[2.035s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description' for CMake module files
+[2.036s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_description
+[2.036s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description' for CMake config files
+[2.037s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot_description', 'cmake_prefix_path')
+[2.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/hook/cmake_prefix_path.ps1'
+[2.037s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/hook/cmake_prefix_path.dsv'
+[2.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/hook/cmake_prefix_path.sh'
+[2.038s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/bin'
+[2.039s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/lib/pkgconfig/parc_robot_description.pc'
+[2.039s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/lib/python3.12/site-packages'
+[2.039s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/bin'
+[2.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.ps1'
+[2.040s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.dsv'
+[2.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.sh'
+[2.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.bash'
+[2.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.zsh'
+[2.042s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/colcon-core/packages/parc_robot_description)
+[2.043s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parc_robot_description)
+[2.043s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description' for CMake module files
+[2.043s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description' for CMake config files
+[2.044s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot_description', 'cmake_prefix_path')
+[2.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/hook/cmake_prefix_path.ps1'
+[2.044s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/hook/cmake_prefix_path.dsv'
+[2.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/hook/cmake_prefix_path.sh'
+[2.045s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/bin'
+[2.045s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/lib/pkgconfig/parc_robot_description.pc'
+[2.046s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/lib/python3.12/site-packages'
+[2.046s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/bin'
+[2.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.ps1'
+[2.047s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.dsv'
+[2.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.sh'
+[2.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.bash'
+[2.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/parc_robot_description/package.zsh'
+[2.049s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description/share/colcon-core/packages/parc_robot_description)
+[2.050s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup' with build type 'ament_cmake'
+[2.050s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup'
+[2.050s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.050s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.063s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup
+[2.732s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher' for CMake module files
+[2.732s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/test_publisher' returned '0': PYTHONPATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/test_publisher build --build-base /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/build install --record /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/test_publisher/install.log --single-version-externally-managed install_data
+[2.733s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher' for CMake config files
+[2.733s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib'
+[2.734s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/bin'
+[2.734s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/pkgconfig/test_publisher.pc'
+[2.734s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/lib/python3.12/site-packages'
+[2.734s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_publisher', 'pythonpath')
+[2.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/hook/pythonpath.ps1'
+[2.735s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/hook/pythonpath.dsv'
+[2.735s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/hook/pythonpath.sh'
+[2.736s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/bin'
+[2.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_publisher)
+[2.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/package.ps1'
+[2.737s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/package.dsv'
+[2.737s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/package.sh'
+[2.738s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/package.bash'
+[2.738s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/test_publisher/package.zsh'
+[2.738s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/test_publisher/share/colcon-core/packages/test_publisher)
+[3.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup
+[3.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup -- -j12 -l12
+[4.046s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup -- -j12 -l12
+[4.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup
+[4.185s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parc_robot_bringup)
+[4.186s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup' for CMake module files
+[4.187s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/build/parc_robot_bringup
+[4.187s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup' for CMake config files
+[4.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot_bringup', 'cmake_prefix_path')
+[4.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/cmake_prefix_path.ps1'
+[4.190s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/cmake_prefix_path.dsv'
+[4.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/cmake_prefix_path.sh'
+[4.191s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/lib'
+[4.191s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/bin'
+[4.191s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/lib/pkgconfig/parc_robot_bringup.pc'
+[4.192s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/lib/python3.12/site-packages'
+[4.192s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot_bringup', 'pythonpath')
+[4.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/pythonpath.ps1'
+[4.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/pythonpath.dsv'
+[4.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/pythonpath.sh'
+[4.194s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/bin'
+[4.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.ps1'
+[4.196s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.dsv'
+[4.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.sh'
+[4.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.bash'
+[4.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.zsh'
+[4.198s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/colcon-core/packages/parc_robot_bringup)
+[4.199s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parc_robot_bringup)
+[4.199s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup' for CMake module files
+[4.200s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup' for CMake config files
+[4.202s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot_bringup', 'cmake_prefix_path')
+[4.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/cmake_prefix_path.ps1'
+[4.203s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/cmake_prefix_path.dsv'
+[4.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/cmake_prefix_path.sh'
+[4.204s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/lib'
+[4.204s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/bin'
+[4.205s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/lib/pkgconfig/parc_robot_bringup.pc'
+[4.205s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/lib/python3.12/site-packages'
+[4.205s] Level 1:colcon.colcon_core.shell:create_environment_hook('parc_robot_bringup', 'pythonpath')
+[4.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/pythonpath.ps1'
+[4.206s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/pythonpath.dsv'
+[4.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/hook/pythonpath.sh'
+[4.207s] Level 1:colcon.colcon_core.environment:checking '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/bin'
+[4.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.ps1'
+[4.208s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.dsv'
+[4.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.sh'
+[4.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.bash'
+[4.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/parc_robot_bringup/package.zsh'
+[4.211s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/parc_robot_bringup/share/colcon-core/packages/parc_robot_bringup)
+[4.211s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.212s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.212s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.212s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.221s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.221s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.221s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.226s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.226s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/local_setup.ps1'
+[4.227s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/_local_setup_util_ps1.py'
+[4.229s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/setup.ps1'
+[4.230s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/local_setup.sh'
+[4.231s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/_local_setup_util_sh.py'
+[4.232s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/setup.sh'
+[4.233s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/local_setup.bash'
+[4.234s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/setup.bash'
+[4.235s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/local_setup.zsh'
+[4.235s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jachin/parc_main/PARC2026-ENG-ARCX6/install/setup.zsh'
