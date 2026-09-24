@@ -1,0 +1,231 @@
+<?xml version="1.0" ?>
+<robot name="sitoe" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="inertial_macros.xacro"/>
+
+  <!-- Robot's chassis properties -->
+  <xacro:property name="top_chassis_length" value="0.4437"/>
+  <xacro:property name="top_chassis_width" value="1.248"/>
+  <xacro:property name="top_chassis_height" value="0.4858"/>
+
+  <xacro:property name="bottom_chassis_length" value="0.4437"/>
+  <xacro:property name="bottom_chassis_width" value="0.03785"/>
+  <xacro:property name="bottom_chassis_height" value="0.3737"/>
+
+  <!-- Robot's wheel properties -->
+  <xacro:property name="wheel_radius" value="0.086"/>
+  <xacro:property name="wheel_height" value="0.0446"/>
+  <xacro:property name="wheel_mass" value="2.2"/>
+
+  <xacro:property name="caster_wheel_radius" value="0.0508"/>
+
+  <!-- Base footprint -->
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 ${pi/2}" xyz="0.0 0.0 0.0381"/>
+  </joint>
+
+  <!-- Base link/bottom chassis -->
+  <link name="base_link">
+    <visual>
+      <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://parc_robot_description/meshes/sitoe_chassis_bottom.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0.0535"/>
+      <geometry>
+        <box size="${bottom_chassis_length} ${bottom_chassis_width} ${bottom_chassis_height}"/>
+      </geometry>
+    </collision>
+
+    <xacro:box_inertia mass="7.50" length="${bottom_chassis_length}" width="${bottom_chassis_width}" height="${bottom_chassis_height}">
+      <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0.0535"/>
+    </xacro:box_inertia>
+  </link>
+
+  <!-- Robot chassis bumper -->
+  <gazebo reference="base_link">
+    <sensor name="base_collision_sensor" type="contact">
+      <contact>
+        <collision>base_footprint_fixed_joint_lump__base_link_collision</collision>
+        <topic>base_collisions</topic>
+      </contact>
+      <always_on>true</always_on>
+      <update_rate>5</update_rate>
+    </sensor>
+  </gazebo>
+
+  <!-- Top chassis -->
+  <link name="top_chassis_link">
+    <visual>
+      <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://parc_robot_description/meshes/sitoe_chassis_top.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${pi/2} 0 0" xyz="0.0 0.0454341 0.68679"/>
+      <geometry>
+        <box size="${top_chassis_length} ${top_chassis_width} ${top_chassis_height}"/>
+      </geometry>
+    </collision>
+
+    <xacro:box_inertia mass="7.50" length="${top_chassis_length}" width="${top_chassis_width}" height="${top_chassis_height}">
+      <origin rpy="${pi/2} 0 0" xyz="0.0 0.0454341 0.68679"/>
+    </xacro:box_inertia>
+  </link>
+
+  <!-- Top chassis bumper -->
+  <gazebo reference="top_chassis_link">
+    <sensor name="top_chassis_collision_sensor" type="contact">
+      <contact>
+        <collision>base_footprint_fixed_joint_lump__top_chassis_link_collision_2</collision>
+        <topic>top_chassis_collisions</topic>
+      </contact>
+      <always_on>true</always_on>
+      <update_rate>5</update_rate>
+    </sensor>
+  </gazebo>
+
+  <joint name="chassis_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="top_chassis_link"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <!-- Right wheel -->
+  <link name="right_wheel_link">
+    <visual>
+      <origin rpy="0 -${pi/2} 0" xyz="0.0956 -0.0435 0.19096"/> <!-- up, forward, sideways-->
+      <!-- <origin rpy="0 -${pi/2} 0" xyz="0.0956 -0.0435 0.1965"/> -->
+      <geometry>
+        <mesh filename="package://parc_robot_description/meshes/right_wheel.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.006"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_radius}"/>
+      </geometry>
+    </collision>
+
+    <xacro:cylinder_inertia mass="${wheel_mass}" length="${wheel_height}" radius="${wheel_radius}">
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.006"/>
+    </xacro:cylinder_inertia>
+  </link>
+
+  <!-- Right wheel bumper -->
+  <gazebo reference="right_wheel_link">
+    <sensor name="right_wheel_collision_sensor" type="contact">
+      <contact>
+        <collision>right_wheel_link_collision</collision>
+        <topic>right_wheel_collisions</topic>
+      </contact>
+      <always_on>true</always_on>
+      <update_rate>5</update_rate>
+    </sensor>
+  </gazebo>
+
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel_link"/>
+    <origin rpy="0 ${pi/2} 0" xyz="-0.19649 -0.095 0.0476"/>
+    <!-- <origin rpy="0 ${pi/2} 0" xyz="-0.19649 -0.0945 0.0476"/> -->
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- Left wheel -->
+  <link name="left_wheel_link">
+    <visual>
+      <origin rpy="0 ${pi/2} 0" xyz="-0.0956 -0.0435 0.19096"/> <!-- up, forward, sideways-->
+      <geometry>
+        <mesh filename="package://parc_robot_description/meshes/left_wheel.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.006"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_radius}"/>
+      </geometry>
+    </collision>
+
+    <xacro:cylinder_inertia mass="${wheel_mass}" length="${wheel_height}" radius="${wheel_radius}">
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.006"/>
+    </xacro:cylinder_inertia>
+  </link>
+
+  <!-- Left wheel bumper -->
+  <gazebo reference="left_wheel_link">
+    <sensor name="left_wheel_collision_sensor" type="contact">
+      <contact>
+        <collision>left_wheel_link_collision</collision>
+        <topic>left_wheel_collisions</topic>
+      </contact>
+      <always_on>true</always_on>
+      <update_rate>5</update_rate>
+    </sensor>
+  </gazebo>
+
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel_link"/>
+    <origin rpy="0 -${pi/2} 0" xyz="0.19649 -0.095 0.0476"/>
+    <axis xyz="0 0 -1"/>
+  </joint>
+
+  <!-- Caster wheel -->
+  <link name="caster_wheel_link">
+    <visual>
+      <origin rpy="${pi/2} 0 ${pi/2}" xyz="0.133 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://parc_robot_description/meshes/caster_wheel.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0026" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="${caster_wheel_radius}"/>
+      </geometry>
+    </collision>
+
+    <xacro:sphere_inertia mass="0.45" radius="${caster_wheel_radius}">
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+    </xacro:sphere_inertia>
+  </link>
+
+  <joint name="caster_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_wheel_link"/>
+    <origin rpy="0 0 -${pi/2}" xyz="0.0 0.133 0.0"/>
+  </joint>
+
+  <!-- Friction -->
+  <gazebo reference="caster_wheel_link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+  </gazebo>
+
+  <gazebo reference="right_wheel_link">
+    <mu1>0.9</mu1>
+    <mu2>0.7</mu2>
+    <kp>10000000.0</kp>
+    <kd>0.0</kd>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+  <gazebo reference="left_wheel_link">
+    <mu1>0.9</mu1>
+    <mu2>0.7</mu2>
+    <kp>10000000.0</kp>
+    <kd>0.0</kd>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+</robot>

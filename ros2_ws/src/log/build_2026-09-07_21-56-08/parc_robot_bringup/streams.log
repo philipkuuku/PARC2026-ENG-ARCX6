@@ -1,0 +1,232 @@
+[0.010s] Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:/home/jachin/ros_ws/install/ros_ws_rosmaster:/home/jachin/ros_ws/install/ros_ws_navigation:/home/jachin/ros_ws/install/ros_ws_localization:/home/jachin/ros_ws/install/parcbot_description:/home/jachin/ros_ws/install/parc_robot_bringup:/home/jachin/ros_ws/install/parc_robot_description:/home/jachin/ros_ws/install/parc_robot:/home/jachin/ros_ws/install/my_package:/home/jachin/ros_ws/install/bringup_pkg:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jachin/ros_ws/install/test_publisher:/home/jachin/ros_ws/install/temperature_monitor:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup
+[0.069s] -- The C compiler identification is GNU 13.3.0
+[0.120s] -- The CXX compiler identification is GNU 13.3.0
+[0.136s] -- Detecting C compiler ABI info
+[0.227s] -- Detecting C compiler ABI info - done
+[0.234s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.234s] -- Detecting C compile features
+[0.235s] -- Detecting C compile features - done
+[0.244s] -- Detecting CXX compiler ABI info
+[0.344s] -- Detecting CXX compiler ABI info - done
+[0.353s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.353s] -- Detecting CXX compile features
+[0.354s] -- Detecting CXX compile features - done
+[0.361s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.543s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.688s] -- Found rclpy: 7.1.11 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.693s] -- Found urdf: 2.10.0 (/opt/ros/jazzy/share/urdf/cmake)
+[0.754s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.966s] -- Configuring done (0.9s)
+[0.970s] -- Generating done (0.0s)
+[0.972s] -- Build files have been written to: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup
+[0.979s] Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:/home/jachin/ros_ws/install/ros_ws_rosmaster:/home/jachin/ros_ws/install/ros_ws_navigation:/home/jachin/ros_ws/install/ros_ws_localization:/home/jachin/ros_ws/install/parcbot_description:/home/jachin/ros_ws/install/parc_robot_bringup:/home/jachin/ros_ws/install/parc_robot_description:/home/jachin/ros_ws/install/parc_robot:/home/jachin/ros_ws/install/my_package:/home/jachin/ros_ws/install/bringup_pkg:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jachin/ros_ws/install/test_publisher:/home/jachin/ros_ws/install/temperature_monitor:/opt/ros/jazzy /usr/bin/cmake /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup
+[0.980s] Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:/home/jachin/ros_ws/install/ros_ws_rosmaster:/home/jachin/ros_ws/install/ros_ws_navigation:/home/jachin/ros_ws/install/ros_ws_localization:/home/jachin/ros_ws/install/parcbot_description:/home/jachin/ros_ws/install/parc_robot_bringup:/home/jachin/ros_ws/install/parc_robot_description:/home/jachin/ros_ws/install/parc_robot:/home/jachin/ros_ws/install/my_package:/home/jachin/ros_ws/install/bringup_pkg:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jachin/ros_ws/install/test_publisher:/home/jachin/ros_ws/install/temperature_monitor:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup -- -j12 -l12
+[1.045s] Built target ament_cmake_python_copy_parc_robot_bringup
+[1.253s] running egg_info
+[1.254s] creating parc_robot_bringup.egg-info
+[1.274s] writing parc_robot_bringup.egg-info/PKG-INFO
+[1.274s] writing dependency_links to parc_robot_bringup.egg-info/dependency_links.txt
+[1.274s] writing top-level names to parc_robot_bringup.egg-info/top_level.txt
+[1.274s] writing manifest file 'parc_robot_bringup.egg-info/SOURCES.txt'
+[1.335s] reading manifest file 'parc_robot_bringup.egg-info/SOURCES.txt'
+[1.335s] writing manifest file 'parc_robot_bringup.egg-info/SOURCES.txt'
+[1.368s] Built target ament_cmake_python_build_parc_robot_bringup_egg
+[1.381s] Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:/home/jachin/ros_ws/install/ros_ws_rosmaster:/home/jachin/ros_ws/install/ros_ws_navigation:/home/jachin/ros_ws/install/ros_ws_localization:/home/jachin/ros_ws/install/parcbot_description:/home/jachin/ros_ws/install/parc_robot_bringup:/home/jachin/ros_ws/install/parc_robot_description:/home/jachin/ros_ws/install/parc_robot:/home/jachin/ros_ws/install/my_package:/home/jachin/ros_ws/install/bringup_pkg:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jachin/ros_ws/install/test_publisher:/home/jachin/ros_ws/install/temperature_monitor:/opt/ros/jazzy /usr/bin/cmake --build /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup -- -j12 -l12
+[1.383s] Invoking command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:/home/jachin/ros_ws/install/ros_ws_rosmaster:/home/jachin/ros_ws/install/ros_ws_navigation:/home/jachin/ros_ws/install/ros_ws_localization:/home/jachin/ros_ws/install/parcbot_description:/home/jachin/ros_ws/install/parc_robot_bringup:/home/jachin/ros_ws/install/parc_robot_description:/home/jachin/ros_ws/install/parc_robot:/home/jachin/ros_ws/install/my_package:/home/jachin/ros_ws/install/bringup_pkg:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jachin/ros_ws/install/test_publisher:/home/jachin/ros_ws/install/temperature_monitor:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup
+[1.392s] -- Install configuration: ""
+[1.392s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/config
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/config/task_params.yaml
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/config/gz_bridge.yaml
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/launch
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/launch/task.launch.py
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/model.sdf
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/thumbnails
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/thumbnails/2.png
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/thumbnails/1.png
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/thumbnails/3.png
+[1.393s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/thumbnails/5.png
+[1.394s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/thumbnails/4.png
+[1.394s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/meshes
+[1.394s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/meshes/VendingMachine.obj
+[1.395s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/meshes/VendingMachine.mtl
+[1.395s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/meshes/VendingMachine_Diffuse.png
+[1.395s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/VendingMachine/model.config
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/goal_location
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/goal_location/model.sdf
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/goal_location/model.config
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/model.sdf
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/thumbnails
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/thumbnails/3.jpg
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/thumbnails/1.jpg
+[1.396s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/thumbnails/0.jpg
+[1.397s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/thumbnails/2.jpg
+[1.397s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/thumbnails/4.jpg
+[1.397s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/meshes
+[1.397s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/meshes/model.obj
+[1.398s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/meshes/model.mtl
+[1.398s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/materials
+[1.398s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/materials/textures
+[1.398s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/materials/textures/breakfast_menu_diffuse.png
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/breakfast_menu/model.config
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/model.sdf
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/thumbnails
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/thumbnails/2.png
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/thumbnails/1.png
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/thumbnails/3.png
+[1.409s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/thumbnails/5.png
+[1.410s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/thumbnails/4.png
+[1.410s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/meshes
+[1.410s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/meshes/WoodenChair_Diffuse.png
+[1.410s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/meshes/WoodenChair_Col.obj
+[1.410s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/meshes/WoodenChair.obj
+[1.410s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/meshes/WoodenChair_Col.mtl
+[1.410s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/meshes/WoodenChair.mtl
+[1.411s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/meshes/WoodenChair_Rough.png
+[1.411s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/WoodenChair/model.config
+[1.411s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table
+[1.411s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/model.sdf
+[1.411s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/model-1_4.sdf
+[1.411s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/thumbnails
+[1.412s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/thumbnails/2.png
+[1.412s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/thumbnails/1.png
+[1.412s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/thumbnails/3.png
+[1.412s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/thumbnails/5.png
+[1.412s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/thumbnails/4.png
+[1.412s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/meshes
+[1.412s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/meshes/cafe_table.dae
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/materials
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/materials/textures
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/materials/textures/Wood_Floor_Dark.jpg
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/materials/textures/Maple.jpg
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe_table/model.config
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/model.sdf
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/thumbnails
+[1.413s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/thumbnails/2.png
+[1.414s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/thumbnails/1.png
+[1.414s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/thumbnails/3.png
+[1.414s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/thumbnails/5.png
+[1.414s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/thumbnails/4.png
+[1.414s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/meshes
+[1.415s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/meshes/cafe.dae
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_23.jpg
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_37.jpg
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_26.jpg
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_35.jpg
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_2.jpg
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_10.jpg
+[1.417s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_28.jpg
+[1.418s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_21.jpg
+[1.418s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_25.jpg
+[1.418s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_24.jpg
+[1.418s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_29.jpg
+[1.418s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_31.jpg
+[1.418s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_34.jpg
+[1.418s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_30.jpg
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/materials/textures/__auto_22.jpg
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/cafe/model.config
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/model.sdf
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/thumbnails
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/thumbnails/2.png
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/thumbnails/1.png
+[1.419s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/thumbnails/3.png
+[1.420s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/thumbnails/5.png
+[1.420s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/thumbnails/4.png
+[1.420s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/meshes
+[1.420s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/meshes/FemaleVisitor.obj
+[1.420s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/meshes/FemaleVisitor_Col.obj
+[1.420s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/meshes/FemaleVisitor.mtl
+[1.421s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/meshes/FemaleVisitor.png
+[1.421s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/meshes/FemaleVisitor_Col.mtl
+[1.421s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/meshes/Handbag.png
+[1.421s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitor/model.config
+[1.421s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/model.sdf
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/thumbnails
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/thumbnails/2.png
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/thumbnails/1.png
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/thumbnails/3.png
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/thumbnails/5.png
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/thumbnails/4.png
+[1.422s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/meshes
+[1.423s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/meshes/MaleVisitorSit_Col.obj
+[1.423s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/meshes/MaleVisitorSit_Col.mtl
+[1.423s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/meshes/MaleVisitorSit.obj
+[1.423s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/meshes/MaleVisitorSit.png
+[1.423s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/meshes/MaleVisitorSit.mtl
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/meshes/Phone.png
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/MaleVisitorSit/model.config
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_23.jpg
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_37.jpg
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_26.jpg
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_35.jpg
+[1.424s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_2.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_10.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_28.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_21.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_25.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_24.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_29.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_31.jpg
+[1.425s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_34.jpg
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/Wood_Floor_Dark.jpg
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_30.jpg
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/__auto_22.jpg
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/materials/textures/Maple.jpg
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/model.sdf
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/thumbnails
+[1.426s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/thumbnails/2.png
+[1.427s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/thumbnails/1.png
+[1.427s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/thumbnails/3.png
+[1.427s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/thumbnails/5.png
+[1.427s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/thumbnails/4.png
+[1.427s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/meshes
+[1.427s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/meshes/FemaleVisitorSit.obj
+[1.428s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/meshes/FemaleVisitorSit_Col.obj
+[1.428s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/meshes/FemaleVisitorSit.png
+[1.428s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/meshes/FemaleVisitorSit.mtl
+[1.428s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/meshes/HandbagBlack.png
+[1.428s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/meshes/FemaleVisitorSit_Col.mtl
+[1.429s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/models/FemaleVisitorSit/model.config
+[1.429s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/rviz
+[1.429s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/rviz/task.rviz
+[1.429s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/worlds
+[1.429s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/worlds/task_world.sdf
+[1.429s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/environment/pythonpath.sh
+[1.429s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/environment/pythonpath.dsv
+[1.430s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup-0.0.0-py3.12.egg-info
+[1.430s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup-0.0.0-py3.12.egg-info/SOURCES.txt
+[1.430s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup-0.0.0-py3.12.egg-info/dependency_links.txt
+[1.430s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup-0.0.0-py3.12.egg-info/top_level.txt
+[1.430s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup-0.0.0-py3.12.egg-info/PKG-INFO
+[1.430s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup
+[1.430s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup/__init__.py
+[1.466s] Listing '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup'...
+[1.466s] Compiling '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/python3.12/site-packages/parc_robot_bringup/__init__.py'...
+[1.474s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/lib/parc_robot_bringup/load_task_params.py
+[1.474s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/ament_index/resource_index/package_run_dependencies/parc_robot_bringup
+[1.475s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/ament_index/resource_index/parent_prefix_path/parc_robot_bringup
+[1.475s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/environment/ament_prefix_path.sh
+[1.475s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/environment/ament_prefix_path.dsv
+[1.475s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/environment/path.sh
+[1.475s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/environment/path.dsv
+[1.476s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/local_setup.bash
+[1.476s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/local_setup.sh
+[1.476s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/local_setup.zsh
+[1.476s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/local_setup.dsv
+[1.476s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/package.dsv
+[1.476s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/ament_index/resource_index/packages/parc_robot_bringup
+[1.477s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/cmake/parc_robot_bringupConfig.cmake
+[1.477s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/cmake/parc_robot_bringupConfig-version.cmake
+[1.477s] -- Installing: /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_bringup/share/parc_robot_bringup/package.xml
+[1.479s] Invoked command in '/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot_description:/home/jachin/ros_ws/install/ros_ws_rosmaster:/home/jachin/ros_ws/install/ros_ws_navigation:/home/jachin/ros_ws/install/ros_ws_localization:/home/jachin/ros_ws/install/parcbot_description:/home/jachin/ros_ws/install/parc_robot_bringup:/home/jachin/ros_ws/install/parc_robot_description:/home/jachin/ros_ws/install/parc_robot:/home/jachin/ros_ws/install/my_package:/home/jachin/ros_ws/install/bringup_pkg:/home/jachin/ros2_ws/install/parc_robot_bringup:/home/jachin/ros2_ws/install/parc_robot_description:/home/jachin/ros2_ws/install/parc_robot:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jachin/ros_ws/install/test_publisher:/home/jachin/ros_ws/install/temperature_monitor:/opt/ros/jazzy /usr/bin/cmake --install /home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup

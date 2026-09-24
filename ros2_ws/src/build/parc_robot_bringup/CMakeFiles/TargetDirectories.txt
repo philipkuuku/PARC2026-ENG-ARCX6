@@ -1,0 +1,11 @@
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/uninstall.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/parc_robot_bringup_uninstall.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/ament_cmake_python_copy_parc_robot_bringup.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/ament_cmake_python_build_parc_robot_bringup_egg.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/test.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/edit_cache.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/rebuild_cache.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/list_install_components.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/install.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/install/local.dir
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/build/parc_robot_bringup/CMakeFiles/install/strip.dir

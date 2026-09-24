@@ -1,0 +1,15 @@
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/ament_index/resource_index/package_run_dependencies/parc_robot
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/ament_index/resource_index/parent_prefix_path/parc_robot
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/environment/ament_prefix_path.sh
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/environment/ament_prefix_path.dsv
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/environment/path.sh
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/environment/path.dsv
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/local_setup.bash
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/local_setup.sh
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/local_setup.zsh
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/local_setup.dsv
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/package.dsv
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/ament_index/resource_index/packages/parc_robot
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/cmake/parc_robotConfig.cmake
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/cmake/parc_robotConfig-version.cmake
+/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/install/parc_robot/share/parc_robot/package.xml

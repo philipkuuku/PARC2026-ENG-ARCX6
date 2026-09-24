@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="lidar_link">
+    <visual>
+      <origin rpy="${pi/2} 0 0" xyz="0.0 -0.021 0.0"/>
+      <geometry>
+        <mesh filename="package://parc_robot_description/meshes/rplidarc1.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.02065" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.0278" length="0.0413"/>
+      </geometry>
+    </collision>
+
+    <xacro:cylinder_inertia mass="0.11" length="0.0413" radius="0.0278">
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    </xacro:cylinder_inertia>
+  </link>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin rpy="0 0 -${pi/2}" xyz="0.0 0.021 0.0"/>
+  </joint>
+
+  <gazebo reference="lidar_link">
+    <sensor name="rplidar_c1" type="gpu_lidar">
+      <pose>0 0 0.01 0 -${pi/72} 0</pose>
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>10</update_rate>
+      <topic>scan</topic>
+      <gz_frame_id>lidar_link</gz_frame_id>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>12.0</max>
+          <resolution>0.015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+    </sensor>
+  </gazebo>
+</robot>

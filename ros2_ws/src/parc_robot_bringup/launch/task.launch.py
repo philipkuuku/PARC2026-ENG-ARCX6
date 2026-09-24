@@ -36,6 +36,9 @@ def generate_launch_description():
     set_env_vars_resources = AppendEnvironmentVariable(
         "GZ_SIM_RESOURCE_PATH", os.path.join(pkg_path, "models")
     )
+    slam_params_file = os.path.join(pkg_path, "config/mapper_params_online_sync.yaml")
+    twist_mux_yaml_file = os.path.join(pkg_path, "config/twist_mux.yaml")
+    nav2_params_file = os.path.join(pkg_path, "config/nav2_params.yaml")
 
     # Launch configuration variables
     use_sim_time = LaunchConfiguration("use_sim_time")
@@ -201,6 +204,38 @@ def generate_launch_description():
         name="rviz2",
         output="screen",
         arguments=["-d", rviz_config_file],
+        parameters=[{"use_sim_time": use_sim_time}],
+    )
+
+    # SLAM Toolbox node
+    start_slam = Node(
+            package="slam_toolbox",
+            executable="sync_slam_toolbox_node",
+            name="slam_toolbox",
+            output="screen",
+            parameters=[slam_params_file, {
+                "use_sim_time": LaunchConfiguration("use_sim_time"),
+            }],
+        )
+
+    # Twist mux node
+    start_twist_mux = Node(
+        package='twist_mux',
+        executable='twist_mux',
+        name='twist_mux',
+        parameters=[twist_mux_yaml_file],
+        remappings=[('/cmd_vel_out', '/cmd_vel')]
+    )
+
+    # Start Nav2 node
+    start_nav2 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(FindPackageShare("nav2_bringup").find("nav2_bringup"), "launch", "navigation_launch.py")
+        ),
+        launch_arguments={
+            "use_sim_time": use_sim_time,
+            "params_file": nav2_params_file,
+        }.items(),
     )
 
     # Create the launch description and populate
@@ -212,6 +247,9 @@ def generate_launch_description():
 
     # Add any actions
     ld.add_action(start_rviz_cmd)
+    ld.add_action(start_slam) # comment out when mapping with slam
+    # ld.add_action(start_twist_mux)
+    # ld.add_action(start_nav2)
     ld.add_action(delayed_camera_adjustment)
     ld.add_action(OpaqueFunction(function=spawn_gazebo_entities))
     ld.add_action(start_robot_state_publisher_cmd)

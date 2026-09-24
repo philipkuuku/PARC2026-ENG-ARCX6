@@ -11,6 +11,8 @@
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
   <exec_depend>parc_robot_description</exec_depend>
+  <exec_depend>ros_localization</exec_depend>
+  <exec_depend>ros_navigation</exec_depend>
 
   <depend>controller_manager</depend>
   <depend>rclpy</depend>
