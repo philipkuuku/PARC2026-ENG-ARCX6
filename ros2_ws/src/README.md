@@ -8,7 +8,7 @@ Pan-African Robotics Competition (PARC) Engineers League 2026 project developmen
 
 - Launch command: 
     ros2 launch parc_robot_bringup task.launch.py
-    ros2 launch slam_toolbox online_async_launch.py
+    ros2 launch slam_toolbox online_async_launch.py use_sim_time:=true
 - Control with teleop: 
     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap \
 /cmd_vel:=/robot_base_controller/cmd_vel_unstamped
@@ -33,6 +33,11 @@ ros2 run nav2_amcl amcl --ros-args -p use_sim_time:=true
   map:=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/restaurant_savemap.yaml \
   params_file:=/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/parc_robot_bringup/config/nav2_params.yaml
 
+## To run nav2
+- Launch command: ros2 launch parc_robot_bringup task.launch.py
+- Set map in Fixed Frame - Global Options
+- Set Map thing and select map as Topic and Transient Local for Durability Policy
+- Set Pose Estimate 
 
 ## References
 - [Cafe world](https://app.gazebosim.org/OpenRobotics/fuel/models/Cafe)
