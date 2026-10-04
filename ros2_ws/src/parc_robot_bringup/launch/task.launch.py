@@ -40,7 +40,7 @@ def generate_launch_description():
     slam_params_file = os.path.join(pkg_path, "config/mapper_params_online_async.yaml")
     twist_mux_yaml_file = os.path.join(pkg_path, "config/twist_mux.yaml")
     nav2_params_file = os.path.join(pkg_path, "config/nav2_params.yaml")
-    maps_yaml_file = os.path.join(pkg_path, "maps/28_sep_save.yaml")
+    maps_yaml_file = os.path.join(pkg_path, "maps/oct3_jac/sat3_oct_save.yaml")
 
     # Launch configuration variables
     use_sim_time = LaunchConfiguration("use_sim_time")
@@ -252,7 +252,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             "use_sim_time": use_sim_time,
-            "map": "/home/jachin/parc_main/PARC2026-ENG-ARCX6/ros2_ws/src/28_sep_save.yaml",
+            "map": maps_yaml_file,
             "params_file": nav2_params_file,
         }.items(),
     )

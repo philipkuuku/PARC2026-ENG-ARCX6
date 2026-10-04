@@ -9,7 +9,7 @@ find_package(urdf REQUIRED)
 find_package(pluginlib REQUIRED)
 
 install(
-  DIRECTORY config launch models rviz worlds
+  DIRECTORY config launch models rviz worlds maps
   DESTINATION share/${PROJECT_NAME}
 )
 

@@ -1,7 +1,7 @@
-image: 28_sep_save.pgm
+image: sat3_oct_save.pgm
 mode: trinary
 resolution: 0.050
-origin: [-3.944, -4.770, 0]
+origin: [-3.775, -8.374, 0]
 negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196
