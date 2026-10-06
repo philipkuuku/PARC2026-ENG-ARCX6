@@ -14,14 +14,14 @@ slam_toolbox:
     map_frame: map
     base_frame: base_link
     scan_topic: /scan
-    mode: mapping
+    mode: localization
     use_map_saver: true
     
 
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    map_file_name: /home/dev/dev_ws/my_map_serial
+    map_file_name: /home/eyiram-gaze/PARC2026-ENG-ARCX6/ros2_ws/src/maps/oct5_jac_map_save_edited
     # map_start_pose: [0.0, 0.0, 0.0]
     map_start_at_dock: true
 
