@@ -31,7 +31,7 @@ from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     # Get the launch directory
-    bringup_dir = get_package_share_directory('parc_robot_bringup')
+    bringup_dir = get_package_share_directory('arcx6_solution')
 
     namespace = LaunchConfiguration('namespace')
     map_yaml_file = LaunchConfiguration('map')
@@ -74,7 +74,7 @@ def generate_launch_description():
 
     declare_map_yaml_cmd = DeclareLaunchArgument(
         'map', 
-        default_value='/home/eyiram-gaze/PARC2026-ENG-ARCX6/ros2_ws/src/maps/oct5_jac_map_save_edited.yaml',
+        default_value='/home/eyiram-gaze/PARC2026-ENG-ARCX6/ros2_ws/src/arcx6_solution/maps/oct5_jac_map_save_edited.yaml',
         description='Full path to map yaml file to load'
     )
 
