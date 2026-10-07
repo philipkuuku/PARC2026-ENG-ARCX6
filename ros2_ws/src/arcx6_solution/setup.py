@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'ARCX6_solution'
+package_name = 'arcx6_solution'
 
 setup(
     name=package_name,
