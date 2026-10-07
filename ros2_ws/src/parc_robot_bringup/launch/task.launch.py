@@ -20,6 +20,9 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node, SetRemap
 from launch_ros.substitutions import FindPackageShare
 
+from launch_ros.actions import SetParameter
+from launch.conditions import IfCondition, UnlessCondition
+
 
 def generate_launch_description():
 
@@ -40,7 +43,8 @@ def generate_launch_description():
     slam_params_file = os.path.join(pkg_path, "config/mapper_params_online_async.yaml")
     twist_mux_yaml_file = os.path.join(pkg_path, "config/twist_mux.yaml")
     nav2_params_file = os.path.join(pkg_path, "config/nav2_params.yaml")
-    maps_yaml_file = os.path.join(pkg_path, "maps/oct3_jac/sat3_oct_save.yaml")
+    maps_yaml_file = os.path.join(pkg_path, "maps/final_map_save.yaml")
+    laser_filter_yaml_file = os.path.join(pkg_path, "config/laser_filter.yaml")
 
     # Launch configuration variables
     use_sim_time = LaunchConfiguration("use_sim_time")
@@ -220,6 +224,18 @@ def generate_launch_description():
             }],
         )
 
+    # Laser filter node
+    start_laser_filter = Node(
+        package="laser_filters",
+        executable="scan_to_scan_filter_chain",
+        name="scan_filter",
+        parameters=[laser_filter_yaml_file],
+        remappings=[
+            ('scan', '/scan'),
+            ('scan_filtered', '/scan_filtered')
+        ]
+    )
+
     # Twist mux node
     start_twist_mux = Node(
         package='twist_mux',
@@ -230,19 +246,12 @@ def generate_launch_description():
     )
 
     # Start Nav2 node
-    start_nav2 = GroupAction(
-        actions=[
-            SetRemap(src='/cmd_vel', dst='/cmd_vel_nav'),
-            IncludeLaunchDescription(
-                PythonLaunchDescriptionSource(
-                    os.path.join(FindPackageShare("nav2_bringup").find("nav2_bringup"), "launch", "navigation_launch.py")
-                ),
-                launch_arguments={
-                    "use_sim_time": use_sim_time,
-                    "params_file": nav2_params_file,
-                }.items(),
-            )
-        ]
+    start_nav2 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            FindPackageShare("nav2_bringup").find("nav2_bringup"),
+            "launch", "navigation_launch.py")),
+        launch_arguments={"use_sim_time": use_sim_time,
+                            "params_file": nav2_params_file}.items(),
     )
 
     # Start Localization (map_server + amcl)
@@ -264,16 +273,26 @@ def generate_launch_description():
     ld.add_action(declare_use_sim_time_cmd)
     ld.add_action(set_env_vars_resources)
 
+    # FORCE USE_SIM_TIME GLOBALLY FOR ALL NODES IN THIS FILE
+    ld.add_action(SetParameter(name='use_sim_time', value=use_sim_time))
+
     # Add any actions
     ld.add_action(start_rviz_cmd)
+
     # ld.add_action(start_slam) # comment out when mapping with slam
+    ld.add_action(start_laser_filter)
+
     ld.add_action(start_twist_mux)
-    ld.add_action(start_nav2)
-    ld.add_action(start_localization)
-    ld.add_action(delayed_camera_adjustment)
+
     ld.add_action(OpaqueFunction(function=spawn_gazebo_entities))
     ld.add_action(start_robot_state_publisher_cmd)
     ld.add_action(start_gazebo_ros_bridge_cmd)
+
+    ld.add_action(TimerAction(period=8.0, actions=[start_localization, start_nav2]))
+    # ld.add_action(start_nav2)
+    # ld.add_action(start_localization)
+
+    ld.add_action(delayed_camera_adjustment)
     ld.add_action(start_gazebo_ros_top_camera_color_image_bridge_cmd)
     ld.add_action(start_gazebo_ros_bottom_camera_color_image_bridge_cmd)
 
