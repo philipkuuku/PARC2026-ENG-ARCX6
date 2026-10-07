@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'arcx6_solution'
 
@@ -10,6 +12,21 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        # Launch files
+        (
+            os.path.join('share', package_name, 'launch'),
+            glob('launch/*.py')
+        ),
+        # Config files
+        (
+            os.path.join('share', package_name, 'config'),
+            glob('config/*')
+        ),
+        # Map files
+        (
+            os.path.join('share', package_name, 'maps'),
+            glob('maps/*')
+        ),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
