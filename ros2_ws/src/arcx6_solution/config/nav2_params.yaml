@@ -1,6 +1,11 @@
 amcl:
   ros__parameters:
-    initial_pose: [0.0, 0.0, 0.0, 0.0]
+    set_initial_pose: true
+
+    initial_pose.x: -0.071
+    initial_pose.y: 0.042
+    initial_pose.z: 0.0
+    initial_pose.yaw: -0.044
     use_sim_time: True
     alpha1: 0.2
     alpha2: 0.2
@@ -151,12 +156,12 @@ local_costmap:
       width: 3
       height: 3
       resolution: 0.05
-      robot_radius: 0.22
+      robot_radius: 0.30
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.59
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -191,7 +196,7 @@ global_costmap:
       global_frame: map
       robot_base_frame: base_footprint
       use_sim_time: True
-      robot_radius: 0.22
+      robot_radius: 0.30
       resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]

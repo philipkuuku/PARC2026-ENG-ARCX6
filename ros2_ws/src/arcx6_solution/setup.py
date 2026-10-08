@@ -41,6 +41,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'green_detector = arcx6_solution.green_detector:main',
+            'green_nav = arcx6_solution.green_nav:main',
         ],
     },
 )
