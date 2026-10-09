@@ -118,11 +118,11 @@ controller_server:
       debug_trajectory_details: True
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.26
-      max_vel_y: 0.0
-      max_vel_theta: 1.0
+      max_vel_x: 0.36
+      max_vel_y: 0.36
+      max_vel_theta: 1.2
       min_speed_xy: 0.0
-      max_speed_xy: 0.26
+      max_speed_xy: 0.36
       min_speed_theta: 0.0
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
@@ -311,7 +311,7 @@ collision_monitor:
       type: "polygon"
       action_type: "approach"
       footprint_topic: "/local_costmap/published_footprint"
-      time_before_collision: 1.2
+      time_before_collision: 2.0
       simulation_time_step: 0.1
       min_points: 6
       visualize: False

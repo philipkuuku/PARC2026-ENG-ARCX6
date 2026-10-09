@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 import os
 from glob import glob
 
-package_name = 'arcx6_solution'
+package_name = 'task_solution'
 
 setup(
     name=package_name,
@@ -30,7 +30,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='eyiram-gaze',
+    maintainer='ARCX6',
     maintainer_email='eyiramgaze@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
@@ -41,8 +41,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'green_detector = arcx6_solution.green_detector:main',
-            'green_nav = arcx6_solution.green_nav:main',
+            'green_detector = task_solution.green_detector:main',
+            'green_nav = task_solution.green_nav:main',
         ],
     },
 )
