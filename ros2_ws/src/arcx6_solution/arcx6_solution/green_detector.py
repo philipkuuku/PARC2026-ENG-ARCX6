@@ -43,7 +43,7 @@ class GreenDetector(Node):
 
         self.declare_parameter('patch_half_size', 6)    # 6 -> 13x13 patch
         self.declare_parameter('min_valid_points', 8)
-        self.declare_parameter('max_range', 12.0)       # metres
+        self.declare_parameter('max_range', 14.0)       # metres
 
         # ---------------- TF ----------------
         self.tf_buffer = tf2_ros.Buffer()

@@ -1,6 +1,11 @@
 amcl:
   ros__parameters:
-    initial_pose: [0.0, 0.0, 0.0, 0.0]
+    set_initial_pose: true
+
+    initial_pose.x: -0.071
+    initial_pose.y: 0.042
+    initial_pose.z: 0.0
+    initial_pose.yaw: -0.044
     use_sim_time: True
     alpha1: 0.2
     alpha2: 0.2
@@ -39,6 +44,21 @@ amcl:
     z_rand: 0.5
     z_short: 0.05
     scan_topic: scan
+
+velocity_smoother:
+  ros__parameters:
+    use_sim_time: True
+    smoothing_frequency: 20.0
+    scale_velocities: False
+    feedback: "OPEN_LOOP"
+    max_velocity: [0.5, 0.0, 1.5]
+    min_velocity: [-0.5, 0.0, -1.5]
+    max_accel: [2.5, 0.0, 3.2]
+    max_decel: [-2.5, 0.0, -3.2]
+    odom_topic: "odom"
+    odom_duration: 0.1
+    deadband_velocity: [0.0, 0.0, 0.0]
+    velocity_timeout: 1.0
 
 amcl_map_client:
   ros__parameters:
@@ -159,7 +179,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.59
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -215,7 +235,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        inflation_radius: 0.70
       always_send_full_costmap: True
   global_costmap_client:
     ros__parameters:
