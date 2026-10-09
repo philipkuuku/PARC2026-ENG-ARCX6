@@ -23,7 +23,7 @@ class GreenDetector(Node):
 
         self.bridge = CvBridge()
 
-        # ---------------- Parameters ----------------
+        #  Parameters 
         # OpenCV HSV ranges: H 0-179, S 0-255, V 0-255
         self.declare_parameter('image_topic', '/top_camera_color/image_raw')
         self.declare_parameter('cloud_topic', '/top_camera_depth/points')
@@ -35,21 +35,20 @@ class GreenDetector(Node):
         self.declare_parameter('s_high', 255)
         self.declare_parameter('v_low', 50)
         self.declare_parameter('v_high', 255)
-        # Loose defaults so a small, far-away circle on the floor (seen as a
-        # thin ellipse) is still detected. Tighten if you get false positives.
-        self.declare_parameter('min_area', 3.0)
+        self.declare_parameter('min_area', 30.0)
         self.declare_parameter('min_circularity', 0.1)  # 1.0 = perfect circle
+        #self.declare_parameter('max_area', 5000)
         self.declare_parameter('kernel_size', 1)        # 1 = no morphological cleanup
 
-        self.declare_parameter('patch_half_size', 6)    # 6 -> 13x13 patch
+        self.declare_parameter('patch_half_size', 6)    
         self.declare_parameter('min_valid_points', 8)
         self.declare_parameter('max_range', 14.0)       # metres
 
-        # ---------------- TF ----------------
+        # TF 
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
-        # ---------------- Subscriptions (time-synchronized) ----------------
+        #  Subscriptions
         image_topic = self.get_parameter('image_topic').value
         cloud_topic = self.get_parameter('cloud_topic').value
 
@@ -64,7 +63,7 @@ class GreenDetector(Node):
         )
         self.sync.registerCallback(self.synced_callback)
 
-        # ---------------- Publishers ----------------
+        # Publishers 
         self.debug_pub = self.create_publisher(
             Image, '/green_detector/debug_image', 10
         )
@@ -79,7 +78,7 @@ class GreenDetector(Node):
             f'Green detector started | image: {image_topic} | cloud: {cloud_topic}'
         )
 
-    # ------------------------------------------------------------------
+    
     def detect(self, frame):
         """Return (mask, best) where best = (area, (u, v), contour, circularity) or None."""
         p = self.get_parameter
@@ -100,6 +99,7 @@ class GreenDetector(Node):
         )
 
         min_area = p('min_area').value
+        
         min_circ = p('min_circularity').value
 
         best = None
@@ -128,8 +128,6 @@ class GreenDetector(Node):
                 best = (area, (u, v), c, circularity)
 
         return mask, best
-
-    # ------------------------------------------------------------------
     def lookup_3d(self, cloud_msg, u, v):
         """Median XYZ of a small patch around pixel (u, v) in an organized cloud.
         Returns np.array([x, y, z]) in the cloud's frame, or None."""
@@ -159,7 +157,6 @@ class GreenDetector(Node):
 
         return np.median(arr, axis=0)
 
-    # ------------------------------------------------------------------
     def synced_callback(self, img_msg, cloud_msg):
         frame = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
         mask, best = self.detect(frame)
@@ -212,7 +209,6 @@ class GreenDetector(Node):
         out.header = img_msg.header
         self.debug_pub.publish(out)
 
-    # ------------------------------------------------------------------
     def publish_target(self, header, xyz, u, v, area):
         pt = PointStamped()
         pt.header = header  # frame_id = cloud frame, stamp = cloud stamp
