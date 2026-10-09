@@ -29,7 +29,12 @@ In this section, you should give an overview of the competition task, briefly de
 Include a brief description of your approach to the solution (*This should be only 5-7 sentences*).
 
 Write the command required to run your solution. Should be in this format: <br>
-` ros2 run <your-package-name> task_solution.py `
+1. ` ros2 launch parc_robot_bringup task.launch.py `
+2. ` ros2 launch arcx6_solution task_solution.launch.py `
+3. ` ros2 run arcx6_solution green_nav `
+4. ` ros2 run arcx6_solution green_detector `
+
+try to merge to one launch
 
 
 ## Challenges Faced
