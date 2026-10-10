@@ -1,5 +1,7 @@
 # ARCX6 : PARC Engineers League 
 
+https://github.com/user-attachments/assets/5367502c-9aa5-42ba-aa78-974e9cc6a66e
+
 ## Introduction
 
 In this task, an autonomous service robot must navigate a crowded stadium using Nav2, detecting people and obstacles, planning safe paths, and adjusting its movement to reach a goal marked by a green circle. As robots become more common in public spaces, they offer benefits such as improved efficiency, safety, and reduced human workload. However, challenges including high costs, job displacement, reliability, and safety risks remain. Autonomous navigation is therefore essential for enabling robots to operate safely and effectively around people.
