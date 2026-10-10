@@ -108,7 +108,17 @@ source install/setup.bash
 ### Commands required to run our solution <br>
 
 1. ` ros2 launch parc_robot_bringup task.launch.py `
-2. ` ros2 launch task_solution task_solution.launch.py `
+
+> Kindly wait for everything to load, before running step 2
+
+2. ` ros2 launch task_solution task_solution.launch.py navigator_version:=2 `
+
+### Extra work
+To explore the uncertainties of the goal of the map not being in sight of the depth camera on launch, we implemented another solution where the robot turns to scan the for the green goal before autonomous movement. However, this is extra functionality as it was confirmed that the goal will be static and would not move from an organizer. Either of the two implementations work for the purpose of the competition.
+</br>
+That implementation can be explored by changing the navigator_version parameter of Step 2 to 1. i.e.: 
+</br>
+` ros2 launch task_solution task_solution.launch.py navigator_version:=1 `
 
 In case visualization of map is required:
 1. Set Global Fixed Frame in RViz to /map
@@ -134,6 +144,7 @@ Describe any challenges your team may have faced in solving these tasks. Try to 
 * At first, we were not fully aware that a custom parameter file was necessary, and we discovered that relying on Nav2’s default settings was not ideal before we set up and validated our own configuration.
 * Many of the configurations and setup steps caused errors or unexpected output, and finding and fixing each one took a lot of time.
 * At one point, setting the initial pose did not work correctly. The robot’s heading was about 90° off from the direction we set, which caused a mismatch between RViz and Gazebo and made navigation unreliable.
+* Inconsistency with the robot moving to goal when added modifications to the nav2 implementation.
 
 ## Package Overview
 
