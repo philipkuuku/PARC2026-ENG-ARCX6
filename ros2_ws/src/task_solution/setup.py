@@ -43,6 +43,7 @@ setup(
         'console_scripts': [
             'green_detector = task_solution.green_detector:main',
             'green_nav = task_solution.green_nav:main',
+            'green_nav2 = task_solution.green_nav2:main',
         ],
     },
 )

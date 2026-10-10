@@ -22,7 +22,7 @@ class GreenNavigator(Node):
         #Parameters 
         # Rotation goes through the collision monitor input so it stays protected.
         self.declare_parameter('cmd_vel_topic', 'cmd_vel_smoothed')
-        self.declare_parameter('search_angular_speed', 0.4)   # rad/s, + = CCW
+        self.declare_parameter('search_angular_speed', 0.1)   # rad/s, + = CCW
         self.declare_parameter('settle_time', 0.7)            # s stopped before trusting a detection
         self.declare_parameter('max_target_age', 0.5)         # s, detection must be this fresh
         self.declare_parameter('retry_after_fail', True)      # search again if Nav2 fails
