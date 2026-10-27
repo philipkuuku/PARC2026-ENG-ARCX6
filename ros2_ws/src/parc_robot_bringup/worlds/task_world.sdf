@@ -186,6 +186,15 @@
         <name>WoodenChair_5</name>
         <pose>1.6594259738922119 -5.0773301124572754 0.21968099474906921 0 0 0</pose>
       </include>
+
+      <!-- inlcuded AprilTag into world -->
+      <include>
+        <uri>model://Apriltag36_11_00000</uri>
+        <name>AprilTag_3611_00000</name>
+        <static>true</static>
+        <pose>-4.8658 2.5 0.5792 1.5708 0 1.5708</pose>  <!-- x y z roll pitch yaw -->
+      </include>
+
       <light name='sun' type='directional'>
         <pose>0 0 10 0 0 0</pose>
         <cast_shadows>true</cast_shadows>
