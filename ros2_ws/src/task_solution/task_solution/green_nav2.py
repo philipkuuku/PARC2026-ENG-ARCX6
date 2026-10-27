@@ -61,7 +61,7 @@ class GreenNavigator(Node):
         goal.pose.pose.position.x = x
         goal.pose.pose.position.y = y
 
-        # Orientation: yaw = 0 for now
+
         goal.pose.pose.orientation.z = 0.0
         goal.pose.pose.orientation.w = 1.0
 
