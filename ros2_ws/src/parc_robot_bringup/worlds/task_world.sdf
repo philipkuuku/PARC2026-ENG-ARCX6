@@ -192,7 +192,7 @@
         <uri>model://Apriltag36_11_00000</uri>
         <name>AprilTag_3611_00000</name>
         <static>true</static>
-        <pose>-4.8658 2.5 0.5792 1.5708 0 1.5708</pose>  <!-- x y z roll pitch yaw -->
+        <pose>-4.8658 -7.5 1.0 1.5708 0 1.5708</pose>  <!-- x y z roll pitch yaw -->
       </include>
 
       <light name='sun' type='directional'>
