@@ -34,6 +34,8 @@ Write the command required to run your solution. Should be in this format: <br>
 3. ` ros2 run arcx6_solution green_nav `
 4. ` ros2 run arcx6_solution green_detector `
 
+5. Test code for llm to react with nav2: ` ros2 run arcx6_solution terminal_nav --ros-args -p use_sim_time:=true ` and ` export GROQ_API_KEY="" `
+
 try to merge to one launch
 
 

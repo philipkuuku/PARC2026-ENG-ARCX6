@@ -1,0 +1,17 @@
+# Positions are in the `map` frame (picked with RViz Publish Point).
+# yaw_deg: 0 = facing +x of the map. Later, tag poses should be standoff
+# poses ~1 m in front of each tag, facing it.
+spots:
+  spot_a: {x: 9.10,  y: 2.24,  yaw_deg: 0.0}
+  spot_b: {x: 13.93, y: -3.42, yaw_deg: 0.0}
+  spot_c: {x: -1.69, y: -3.53, yaw_deg: 0.0}
+  spot_d: {x: 4.57,  y: -2.96, yaw_deg: 0.0}
+
+# Valid AprilTag IDs (tag36h11) given by the organizers: 0, 4, 7, 9.
+# Each tag points at a spot (placeholder) or has its own `pose:`.
+# Set `pose: null` (and remove `spot:`) when the tag's location is unknown.
+tags:
+  0: {spot: spot_a}
+  4: {spot: spot_b}
+  7: {spot: spot_c}
+  9: {spot: spot_d}
