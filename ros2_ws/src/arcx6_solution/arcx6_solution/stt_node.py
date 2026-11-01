@@ -111,7 +111,9 @@ class Segmenter:
         self.preroll_len = max(1, int(preroll_s / self.block_s))
         self.warm = int(warmup_s / self.block_s)
         self.noise = None
+        self.dc = None           # running estimate of the mic's DC offset
         self.last_rms = 0.0
+        self.peak = 0.0          # loudest block since the debug log last read it
         self.reset()
 
     @property
@@ -127,8 +129,14 @@ class Segmenter:
         self.silence = 0.0
 
     def feed(self, block):
+        # Some mics add a constant offset. Left in, it looks like loud room noise
+        # and pushes the speech threshold far too high. Track it and subtract it.
+        mean = float(np.mean(block))
+        self.dc = mean if self.dc is None else 0.98 * self.dc + 0.02 * mean
+        block = block - np.float32(self.dc)
         rms = float(np.sqrt(np.mean(np.square(block, dtype=np.float32))))
         self.last_rms = rms
+        self.peak = max(self.peak, rms)
         if self.noise is None:
             self.noise = rms
         if self.warm > 0:                       # learn the room before listening
@@ -160,10 +168,15 @@ class Segmenter:
 
 
 class WakeFilter:
-    """Optional wake word. 'stop' always gets through: stopping never needs one."""
+    """Optional wake word(s). 'stop' always gets through: stopping never needs one.
+
+    `wake_word` may list several phrases separated by commas, e.g.
+    "hey robot,hi robot". Whole words only; "robots" counts, "robotics" does not.
+    """
 
     def __init__(self, wake_word='', window_s=8.0):
-        self.wake = clean(wake_word)
+        phrases = [clean(w) for w in wake_word.split(',') if clean(w)]
+        self.patterns = [re.compile(rf'\b{re.escape(p)}s?\b') for p in phrases]
         self.window = float(window_s)
         self.until = 0.0
 
@@ -172,12 +185,14 @@ class WakeFilter:
         t = clean(text)
         if set(t.split()) & STOP_WORDS:
             return text.strip(), False
-        if not self.wake:
+        if not self.patterns:
             return text.strip(), False
-        if self.wake in t:
-            self.until = now + self.window      # follow-ups need no wake word
-            rest = t.split(self.wake, 1)[1].strip()
-            return (rest or None), True
+        for pattern in self.patterns:
+            m = pattern.search(t)
+            if m:
+                self.until = now + self.window      # follow-ups need no wake word
+                rest = t[m.end():].strip()
+                return (rest or None), True
         if now < self.until:
             self.until = now + self.window
             return text.strip(), False
@@ -192,7 +207,7 @@ class STTNode(Node):
                 ('base_url', DEFAULT_BASE_URL), ('model', 'whisper-large-v3-turbo'),
                 ('language', 'en'), ('prompt', DEFAULT_PROMPT), ('device', ''),
                 ('wake_word', ''), ('wake_window', 8.0), ('ack_text', 'Yes?'),
-                ('min_rms', 0.01), ('silence_s', 0.8), ('max_utterance_s', 8.0),
+                ('min_rms', 0.01), ('noise_factor', 3.0), ('silence_s', 0.8), ('max_utterance_s', 8.0),
                 ('min_speech_s', 0.4), ('mute_tail_s', 0.6), ('timeout', 10.0),
                 ('debug_levels', False)]:
             self.declare_parameter(name, default)
@@ -207,7 +222,7 @@ class STTNode(Node):
         self.debug = bool(p('debug_levels'))
         self.wake = WakeFilter(p('wake_word'), p('wake_window'))
         self.segmenter = Segmenter(
-            min_rms=p('min_rms'), silence_s=p('silence_s'),
+            min_rms=p('min_rms'), factor=p('noise_factor'), silence_s=p('silence_s'),
             max_s=p('max_utterance_s'), min_speech_s=p('min_speech_s'))
 
         self.tts_speaking = False
@@ -276,9 +291,12 @@ class STTNode(Node):
                 audio = self.segmenter.feed(block)
                 if self.debug and time.monotonic() - last_debug > 1.0:
                     last_debug = time.monotonic()
+                    seg = self.segmenter
                     self.get_logger().info(
-                        f'rms={self.segmenter.last_rms:.4f} '
-                        f'threshold={self.segmenter.threshold:.4f}')
+                        f'peak={seg.peak:.4f} noise={(seg.noise or 0.0):.4f} '
+                        f'threshold={seg.threshold:.4f} dc={(seg.dc or 0.0):+.4f} '
+                        f'{"<-- HEARD" if seg.peak > seg.threshold else ""}')
+                    seg.peak = 0.0
                 if audio is not None:
                     self.on_utterance(audio)
         finally:
@@ -300,7 +318,10 @@ class STTNode(Node):
                 msg = String()
                 msg.data = self.ack_text
                 self.say_pub.publish(msg)
-            self.get_logger().info(f'Heard (not for me or wake only): "{text}"')
+            if woke:
+                self.get_logger().info('Wake word heard.')
+            else:
+                self.get_logger().info(f'Heard, but no wake word (ignored): "{text}"')
             return
         self.get_logger().info(f'Heard: "{command}"')
         msg = String()
