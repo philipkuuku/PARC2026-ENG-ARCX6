@@ -45,13 +45,14 @@ HELP = """Commands:
   /seq N N N ...        visit several tags in order
   /stop                 cancel the current goal / sequence
   /where                print the robot's pose in the map frame
+  /status               what the robot is doing now
   /tags                 list tags and whether their pose is known
   /help  /quit
 Plain text goes to the LLM if configured, otherwise the rule-based parser:
   "go to tag 7", "visit four then nine", "stop"."""
 
 NUMBER_WORDS = {
-    'zero': 0, 'oh': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4,
+    'zero': 0, 'won': 1, 'one': 1, 'two': 2, 'three': 3, 'four': 4,
     'for': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9,
 }
 CANCEL_WORDS = {'stop', 'cancel', 'halt', 'abort'}
@@ -105,7 +106,7 @@ def extract_ids(text):
         prev = tokens[i - 1] if i else ''
         if tok.isdigit():
             ids.append(int(tok))
-        elif tok in ('for', 'oh'):
+        elif tok in ('for', 'won'):
             if prev in ('tag', 'tags'):      # only trust these right after 'tag'
                 ids.append(NUMBER_WORDS[tok])
         elif tok in NUMBER_WORDS:
@@ -122,6 +123,17 @@ def parse_text(text):
         if ids:
             return {'action': 'navigate',
                     'targets': [{'type': 'tag', 'id': i} for i in ids]}
+    # Simple questions, so the offline fallback can still answer the basics.
+    if 'where' in tokens and 'can' in tokens:
+        return {'action': 'tags'}
+    if tokens & {'status', 'doing'} or ('where' in tokens and 'going' in tokens):
+        return {'action': 'status'}
+    if tokens & {'tags', 'places', 'locations'} and tokens & {
+            'list', 'know', 'available', 'what', 'which'}:
+        return {'action': 'tags'}
+    if tokens & {'where', 'position'} or (
+            'which' in tokens and tokens & {'tag', 'tags'}):
+        return {'action': 'where'}
     return None
 
 
@@ -144,7 +156,7 @@ def parse_slash(line):
                 'targets': [{'type': 'tag', 'id': int(a)} for a in args]}
     if cmd == '/stop':
         return {'action': 'cancel'}
-    if cmd in ('/where', '/tags', '/help', '/quit'):
+    if cmd in ('/where', '/status', '/tags', '/help', '/quit'):
         return {'action': cmd[1:]}
     raise ValueError(f'unknown command {cmd}')
 
@@ -161,6 +173,8 @@ class TerminalNav(Node):
             get_package_share_directory(PKG), 'config', 'locations.yaml')
         self.declare_parameter('locations_file', default_file)
         self.registry = Registry(self.get_parameter('locations_file').value)
+        self.declare_parameter('arrival_distance', 0.5)  # m: a failed goal this close counts as reached
+        self.declare_parameter('max_retries', 2)         # resends of the same stop after a far failure
 
         # LLM backend (optional). Key comes from the environment, never the code.
         self.declare_parameter('use_llm', True)
@@ -198,6 +212,11 @@ class TerminalNav(Node):
         self.goal_handle = None
         self.goal_seq = 0          # results/feedback from older goals are ignored
         self.last_fb_print = 0.0
+        self.last_reached = None   # label of the last stop completed
+        self.last_distance = None  # latest distance_remaining for the current goal
+        self.current_pose = None   # (x, y, yaw_deg) of the goal being driven to
+        self.retries = 0
+        self.last_failure = None
 
     # -------------------------------------------------------- output
     def say(self, text):
@@ -257,6 +276,8 @@ class TerminalNav(Node):
             self.navigate(cmd['targets'])
         elif action == 'where':
             self.where()
+        elif action == 'status':
+            self.report_status()
         elif action == 'tags':
             for tid in sorted(self.registry.tags):
                 p = self.registry.tag_pose(tid)
@@ -302,6 +323,8 @@ class TerminalNav(Node):
             resolved.append((label, pose))
         with self.lock:
             self.cancel(quiet=True)                   # new command replaces old
+            self.retries = 0
+            self.last_failure = None
             self.queue = resolved
             self.say('Plan: ' + ' -> '.join(l for l, _ in resolved))
             self.start_next()
@@ -333,6 +356,8 @@ class TerminalNav(Node):
                 return
             label, pose = self.queue.pop(0)
             self.current = label
+            self.current_pose = pose
+            self.last_distance = None
             self.goal_seq += 1
             seq = self.goal_seq
             goal = NavigateToPose.Goal()
@@ -363,28 +388,73 @@ class TerminalNav(Node):
     def on_feedback(self, fb, seq):
         if seq != self.goal_seq:
             return
+        d = fb.feedback.distance_remaining
+        if d <= 0.01:              # Nav2 sends 0.0 before it has a path
+            return
+        self.last_distance = d
         now = time.monotonic()
         if now - self.last_fb_print >= 2.0:
             self.last_fb_print = now
-            d = fb.feedback.distance_remaining
             self.say(f'  ... {d:.1f} m to {self.current}')
             self.publish_status('NAVIGATING', distance=round(d, 2))
+
+    def finish_stop(self, note=None):
+        """The current stop is done (reached, or close enough): announce, move on."""
+        arrived = self.current
+        self.last_reached = arrived
+        self.retries = 0
+        nxt = self.queue[0][0] if self.queue else None
+        if note:
+            self.say(note)
+        self.reply(f'I have arrived at {arrived}.'
+                   + (f' Heading to {nxt} next.' if nxt else ''))
+        self.start_next()
 
     def on_result(self, future, seq):
         if seq != self.goal_seq:
             return
-        status = future.result().status
+        response = future.result()
+        status = response.status
         with self.lock:
             if status == GoalStatus.STATUS_SUCCEEDED:
-                self.say(f'Arrived at {self.current}.')
+                self.finish_stop()
+                return
+
+            reason = self.failure_reason(getattr(response, 'result', None))
+            detail = f'status {status}' + (f': {reason}' if reason else '')
+            self.say(f'Navigation to {self.current} ended with {detail}.')
+            cancelled = status == GoalStatus.STATUS_CANCELED   # someone else cancelled
+
+            # Failed but already close: count it as reached. The robot is within
+            # reach of the goal, and a stuck final rotation is not worth a retry.
+            d = self.distance_to_goal()
+            arrival = self.get_parameter('arrival_distance').value
+            if not cancelled and d is not None and d <= arrival:
+                self.finish_stop(f'  (only {d:.2f} m from the goal: counting it as reached)')
+                return
+
+            # Failed while still far: try the same stop again a few times.
+            limit = self.get_parameter('max_retries').value
+            if not cancelled and self.current_pose is not None and self.retries < limit:
+                self.retries += 1
+                self.say(f'  retrying {self.current} ({self.retries}/{limit})')
+                self.queue.insert(0, (self.current, self.current_pose))
                 self.start_next()
-            else:
-                self.say(f'Navigation to {self.current} ended with status '
-                         f'{status}; dropping remaining stops.')
-                self.queue.clear()
-                self.publish_status('FAILED', status=int(status))
-                self.current = None
-                self.goal_handle = None
+                return
+
+            self.last_failure = detail
+            self.reply(f"Sorry, I couldn't reach {self.current}.")
+            self.queue.clear()
+            self.publish_status('FAILED', status=int(status), reason=reason)
+            self.current = None
+            self.goal_handle = None
+
+    @staticmethod
+    def failure_reason(result):
+        """Nav2's own explanation, when this Nav2 version provides one."""
+        msg = getattr(result, 'error_msg', '') or ''
+        code = getattr(result, 'error_code', 0) or 0
+        return f'{msg} (code {code})'.strip() if (msg or code) else ''
 
     def cancel(self, quiet=False):
         with self.lock:
@@ -399,19 +469,70 @@ class TerminalNav(Node):
                 self.say('Cancelled.' if had_goal else 'Nothing to cancel.')
                 self.publish_status('IDLE')
 
-    def where(self):
+    def robot_pose(self):
+        """(x, y, yaw_rad) of base_footprint in the map frame, or None."""
         try:
             t = self.tf_buffer.lookup_transform(
                 'map', 'base_footprint', rclpy.time.Time())
-        except Exception as e:  # noqa: BLE001
-            self.say(f'No map -> base_footprint transform yet: {e}')
-            return
+        except Exception:  # noqa: BLE001
+            return None
         q = t.transform.rotation
         yaw = math.atan2(2 * (q.w * q.z + q.x * q.y),
                          1 - 2 * (q.y * q.y + q.z * q.z))
-        self.say(f'x={t.transform.translation.x:.2f} '
-                 f'y={t.transform.translation.y:.2f} '
-                 f'yaw={math.degrees(yaw):.0f} deg')
+        return (t.transform.translation.x, t.transform.translation.y, yaw)
+
+    def distance_to_goal(self):
+        """Straight-line distance from the robot to the current goal, in metres."""
+        p = self.robot_pose()
+        if p is not None and self.current_pose is not None:
+            return math.hypot(p[0] - self.current_pose[0], p[1] - self.current_pose[1])
+        return self.last_distance          # fall back to Nav2's last feedback
+
+    def where(self):
+        p = self.robot_pose()
+        if p is None:
+            self.say('No map -> base_footprint transform yet.')
+            return
+        text = (f'I am at x {p[0]:.1f}, y {p[1]:.1f}, '
+                f'facing {math.degrees(p[2]):.0f} degrees.')
+        near = self.nearest_tag(p[0], p[1])
+        if near is not None:
+            tid, d = near
+            if d <= self.get_parameter('arrival_distance').value:
+                text = f'I am at tag {tid}. ' + text
+            else:
+                text += f' The nearest tag is {tid}, {d:.1f} meters away.'
+        self.reply(text)
+
+    def nearest_tag(self, x, y):
+        """(tag_id, distance_m) of the closest tag with a known pose, or None."""
+        best = None
+        for tid in sorted(self.registry.tags):
+            pose = self.registry.tag_pose(tid)
+            if pose is None:
+                continue
+            d = math.hypot(x - pose[0], y - pose[1])
+            if best is None or d < best[1]:
+                best = (tid, d)
+        return best
+
+    def report_status(self):
+        with self.lock:
+            if self.current:
+                text = f'I am heading to {self.current}'
+                if self.last_distance is not None:
+                    text += f', about {self.last_distance:.1f} meters away'
+                if self.queue:
+                    n = len(self.queue)
+                    text += f', with {n} more stop{"s" if n > 1 else ""} after that'
+                text += '.'
+            else:
+                text = 'I am not moving.'
+                if self.last_failure:
+                    text += f' My last trip failed with {self.last_failure}.'
+                if self.last_reached:
+                    text += f' I last reached {self.last_reached}.'
+            self.reply(text)
 
     # -------------------------------------------------------- terminal loop
     def repl(self):

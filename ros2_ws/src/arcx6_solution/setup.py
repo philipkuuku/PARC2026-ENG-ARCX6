@@ -44,6 +44,8 @@ setup(
             'green_detector = arcx6_solution.green_detector:main',
             'green_nav = arcx6_solution.green_nav:main',
             'terminal_nav = arcx6_solution.terminal_nav:main',
+            'stt_node = arcx6_solution.stt_node:main',
+            'tts_node = arcx6_solution.tts_node:main',
         ],
     },
 )

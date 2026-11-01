@@ -24,6 +24,10 @@ In this section, you should give an overview of the competition task, briefly de
 
     * `$ sudo apt-get install python3-opencv`
 
+* ` stt and tts stuff ` :
+    * ` sudo apt update && sudo apt install -y libportaudio2 libportaudiocpp0 portaudio19-dev espeak-ng python3-pip python3-numpy `
+    * ` python -m pip install sounddevice faster-whisper pyttsx3 `
+
 ## Task
 
 Include a brief description of your approach to the solution (*This should be only 5-7 sentences*).
@@ -35,6 +39,9 @@ Write the command required to run your solution. Should be in this format: <br>
 4. ` ros2 run arcx6_solution green_detector `
 
 5. Test code for llm to react with nav2: ` ros2 run arcx6_solution terminal_nav --ros-args -p use_sim_time:=true ` and ` export GROQ_API_KEY="" `
+6. `ros2 run arcx6_solution tts_node`
+    `ros2 run arcx6_solution stt_node --ros-args -p wake_word:="hey robot" -p debug_levels:=true -p wake_window:=15.0`
+    `ros2 run arcx6_solution terminal_nav --ros-args -p use_sim_time:=true`
 
 try to merge to one launch
 

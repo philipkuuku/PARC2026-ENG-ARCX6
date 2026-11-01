@@ -7,11 +7,12 @@ spots:
   spot_c: {x: -1.69, y: -3.53, yaw_deg: 0.0}
   spot_d: {x: 4.57,  y: -2.96, yaw_deg: 0.0}
 
-# Valid AprilTag IDs (tag36h11) given by the organizers: 0, 4, 7, 9.
+# Valid AprilTag IDs (tag36h11) per the organizers: 1, 4, 7, 9 (there is no tag 0).
+# Tags are 16.5 cm square, placed 1 m above the ground.
 # Each tag points at a spot (placeholder) or has its own `pose:`.
 # Set `pose: null` (and remove `spot:`) when the tag's location is unknown.
 tags:
-  0: {spot: spot_a}
+  1: {spot: spot_a}
   4: {spot: spot_b}
   7: {spot: spot_c}
   9: {spot: spot_d}
