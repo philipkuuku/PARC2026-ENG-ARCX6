@@ -26,11 +26,11 @@
       </visual>
       <collision name="plate_collision">
         <pose>0.0325 0 1 0 0 0</pose>
-        <geometry><box><size>0.005 0.20625 0.20625</size></box></geometry>
+        <geometry><box><size>0.005 0.2475 0.2475</size></box></geometry>
       </collision>
       <visual name="plate_visual">
         <pose>0.0325 0 1 0 0 0</pose>
-        <geometry><box><size>0.005 0.20625 0.20625</size></box></geometry>
+        <geometry><box><size>0.005 0.2475 0.2475</size></box></geometry>
         <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse><specular>0 0 0 1</specular></material>
       </visual>
       <visual name="tag_visual">
@@ -38,7 +38,7 @@
         <geometry>
           <mesh>
             <uri>model://apriltag_pole_1/meshes/tag.obj</uri>
-            <scale>1 0.20625 0.20625</scale>
+            <scale>1 0.2475 0.2475</scale>
           </mesh>
         </geometry>
       </visual>

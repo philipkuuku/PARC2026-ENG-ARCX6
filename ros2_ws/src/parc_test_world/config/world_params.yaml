@@ -19,8 +19,10 @@ arena:
 apriltag:
   family: tag36h11
   tag_size: 0.165           # edge length of the BLACK square (what apriltag_ros calls "size")
-  # The printed tag includes a 1-cell white margin, so the full printed square is
-  # tag_size * 10 / 8 = 0.206 m for the value above.
+  margin_cells: 2           # white quiet zone around the black square, in tag cells.
+  # With only 1 cell, detectors (OpenCV aruco) often miss the tag against a grey
+  # background. The full printed square is tag_size * (8 + 2*margin_cells) / 8
+  # = 0.248 m for the values above.
 
 pole:
   diameter: 0.06            # eyeballed

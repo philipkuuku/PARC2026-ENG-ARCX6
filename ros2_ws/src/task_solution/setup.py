@@ -46,6 +46,7 @@ setup(
             'green_nav2 = task_solution.green_nav2:main',
             'start_run = task_solution.start_run:main',
             'mock_referee = task_solution.mock_referee:main',
+            'tag_mapper = task_solution.tag_mapper:main',
         ],
     },
 )

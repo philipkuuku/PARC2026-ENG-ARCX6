@@ -30,7 +30,7 @@ TAGS_FILE = PKG_DIR / "config" / "apriltags.yaml"
 TAG_FAMILIES = {"tag36h11": cv2.aruco.DICT_APRILTAG_36h11}
 
 # Pixels per tag cell in the generated texture. A tag36h11 marker is 8 cells wide
-# (including the black border) plus a 1-cell white margin on each side.
+# (including the black border) plus a white margin of apriltag.margin_cells on each side.
 PX_PER_CELL = 64
 
 
@@ -39,15 +39,16 @@ def fmt(*values):
     return " ".join(f"{v + 0.0:.6g}" for v in values)
 
 
-def make_tag_texture(family, tag_id, path):
-    """Write a tag image with a 1-cell white margin, as it would be printed."""
+def make_tag_texture(family, tag_id, path, margin_cells):
+    """Write a tag image with a white margin of margin_cells, as it would be printed."""
     dictionary = cv2.aruco.getPredefinedDictionary(TAG_FAMILIES[family])
     marker_cells = dictionary.markerSize + 2  # data bits + black border
     # OpenCV < 4.7 calls this drawMarker
     generate = getattr(cv2.aruco, "generateImageMarker", None) or cv2.aruco.drawMarker
     marker = generate(dictionary, tag_id, marker_cells * PX_PER_CELL, borderBits=1)
+    pad = margin_cells * PX_PER_CELL
     image = cv2.copyMakeBorder(
-        marker, PX_PER_CELL, PX_PER_CELL, PX_PER_CELL, PX_PER_CELL,
+        marker, pad, pad, pad, pad,
         cv2.BORDER_CONSTANT, value=255,
     )
     cv2.imwrite(str(path), image)
@@ -113,11 +114,12 @@ def write_pole_model(params, tag_id):
     mesh_dir.mkdir(parents=True)
 
     texture_name = f"{tag['family']}_{tag_id}.png"
-    marker_cells = make_tag_texture(tag["family"], tag_id, mesh_dir / texture_name)
+    margin_cells = tag.get("margin_cells", 1)
+    marker_cells = make_tag_texture(tag["family"], tag_id, mesh_dir / texture_name, margin_cells)
     write_tag_mesh(mesh_dir, texture_name)
 
     radius = pole["diameter"] / 2
-    printed_size = tag["tag_size"] * (marker_cells + 2) / marker_cells
+    printed_size = tag["tag_size"] * (marker_cells + 2 * margin_cells) / marker_cells
     plate_t = pole["plate_thickness"]
     plate_x = radius + plate_t / 2
     tag_x = radius + plate_t + 0.0005  # just proud of the plate to avoid z-fighting

@@ -8,5 +8,6 @@ __pycache__/
 *.pyc
 
 # VS Code generated database files
-.vscode/*.db
-.vscode/*.db-*
+**/.vscode/*.db
+**/.vscode/*.db-*
+**/.vscode/*.db.lock

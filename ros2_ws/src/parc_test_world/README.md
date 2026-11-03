@@ -60,7 +60,8 @@ Don't edit those by hand.
 ## AprilTags
 
 - Family `tag36h11`, black square 0.165 m (the `size` to give your detector). Each tag
-  is printed with a one-cell white margin on a white plate, so the plate is 0.206 m square.
+  is printed with a two-cell white margin on a white plate, so the plate is 0.248 m square
+  (`apriltag.margin_cells` in `config/world_params.yaml`).
 - `config/apriltags.yaml` lists the ground-truth world position and facing direction of
   every tag, for checking localisation against.
 - The simulated top camera is 640 x 480. At that resolution a tag is roughly 38 px wide
