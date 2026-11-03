@@ -1,0 +1,17 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/aix-01/arap_jetson_ws/install/arap_utils/lib/python3.12/site-packages",
+        "/home/aix-01/arap_jetson_ws/install/arap_middleware_api/lib/python3.12/site-packages",
+        "/home/aix-01/arap_jetson_ws/install/arap_interfaces/lib/python3.12/site-packages",
+        "/home/aix-01/arap_jetson_ws/install/arap_imu/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/aix-01/arap_jetson_ws/install/arap_utils/lib/python3.12/site-packages",
+        "/home/aix-01/arap_jetson_ws/install/arap_middleware_api/lib/python3.12/site-packages",
+        "/home/aix-01/arap_jetson_ws/install/arap_interfaces/lib/python3.12/site-packages",
+        "/home/aix-01/arap_jetson_ws/install/arap_imu/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

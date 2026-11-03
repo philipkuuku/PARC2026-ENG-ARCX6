@@ -30,13 +30,13 @@ pole:
   tag_center_height: 1.00   # eyeballed: height of the tag centre above the floor
   plate_thickness: 0.005    # backing plate the tag is stuck to
 
-# One tag per pole. The tag faces the arena centre unless "yaw" is given
+# One tag per pole. IDs match the PARC 2026 referee (1, 4, 7, 9). The tag faces the arena centre unless "yaw" is given
 # (yaw = direction the tag faces, measured from +x).
 poles:
-  - {id: 0, x:  2.0, y:  2.0}
-  - {id: 1, x: -2.0, y:  2.0}
-  - {id: 2, x: -2.0, y: -2.0}
-  - {id: 3, x:  2.0, y: -2.0}
+  - {id: 1, x:  2.0, y:  2.0}
+  - {id: 4, x: -2.0, y:  2.0}
+  - {id: 7, x: -2.0, y: -2.0}
+  - {id: 9, x:  2.0, y: -2.0}
 
 # Tables use the cafe_table model (0.91 m square top, 0.78 m tall).
 tables:

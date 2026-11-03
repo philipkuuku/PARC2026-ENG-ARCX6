@@ -44,6 +44,8 @@ setup(
             'green_detector = task_solution.green_detector:main',
             'green_nav = task_solution.green_nav:main',
             'green_nav2 = task_solution.green_nav2:main',
+            'start_run = task_solution.start_run:main',
+            'mock_referee = task_solution.mock_referee:main',
         ],
     },
 )

@@ -3,22 +3,22 @@
 family: tag36h11
 size: 0.165
 tags:
-- id: 0
+- id: 1
   x: 1.9749
   y: 1.9749
   z: 1.0
   facing_yaw: -2.3562
-- id: 1
+- id: 4
   x: -1.9749
   y: 1.9749
   z: 1.0
   facing_yaw: -0.7854
-- id: 2
+- id: 7
   x: -1.9749
   y: -1.9749
   z: 1.0
   facing_yaw: 0.7854
-- id: 3
+- id: 9
   x: 1.9749
   y: -1.9749
   z: 1.0

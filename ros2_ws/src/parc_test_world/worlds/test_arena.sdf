@@ -103,23 +103,23 @@
     </model>
 
     <include>
-      <uri>model://apriltag_pole_0</uri>
-      <name>apriltag_pole_0</name>
+      <uri>model://apriltag_pole_1</uri>
+      <name>apriltag_pole_1</name>
       <pose>2 2 0 0 0 -2.35619</pose>
     </include>
     <include>
-      <uri>model://apriltag_pole_1</uri>
-      <name>apriltag_pole_1</name>
+      <uri>model://apriltag_pole_4</uri>
+      <name>apriltag_pole_4</name>
       <pose>-2 2 0 0 0 -0.785398</pose>
     </include>
     <include>
-      <uri>model://apriltag_pole_2</uri>
-      <name>apriltag_pole_2</name>
+      <uri>model://apriltag_pole_7</uri>
+      <name>apriltag_pole_7</name>
       <pose>-2 -2 0 0 0 0.785398</pose>
     </include>
     <include>
-      <uri>model://apriltag_pole_3</uri>
-      <name>apriltag_pole_3</name>
+      <uri>model://apriltag_pole_9</uri>
+      <name>apriltag_pole_9</name>
       <pose>2 -2 0 0 0 2.35619</pose>
     </include>
     <include>
