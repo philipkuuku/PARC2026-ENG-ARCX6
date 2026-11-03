@@ -45,6 +45,10 @@ Write the command required to run your solution. Should be in this format: <br>
 
 try to merge to one launch
 
+- things to verify
+ros2 run arcx6_solution dummy_organiser --ros-args -p order:="[7,1,9,4]"
+ros2 run arcx6_solution parc_mission   # type: go
+[also the topics they publish to for start command and id and camera]
 
 ## Challenges Faced
 
