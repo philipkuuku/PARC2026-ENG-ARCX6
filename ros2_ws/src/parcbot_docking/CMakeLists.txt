@@ -16,8 +16,13 @@ find_package(apriltag_msgs REQUIRED)
 find_package(image_proc REQUIRED)
 find_package(tf2_ros REQUIRED)
 
+install(PROGRAMS
+  src/tag_logger.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 install(
-  DIRECTORY config launch
+  DIRECTORY config launch src
   DESTINATION share/${PROJECT_NAME}
 )
 
