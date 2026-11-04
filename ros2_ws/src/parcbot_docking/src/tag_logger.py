@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-import json
 import os
-from ament_index_python.packages import get_package_share_directory
+import yaml
 
 from tf2_ros import Buffer, TransformListener
 from tf2_ros import LookupException, ConnectivityException, ExtrapolationException
@@ -21,9 +20,12 @@ class TagWorldCoordinateLogger(Node):
         
         self.mapped_tags = {}
         
-        # Save directly inside your package's src directory
-        package_share = get_package_share_directory('parcbot_docking')  
-        self.output_file = os.path.join(package_share, 'src', 'mapped_tag_world_coordinates.json')
+        # Save inside the package's source directory (not install/share)
+        self.declare_parameter(
+            'output_file',
+            '~/arcx6_ws/src/PARC2026-ENG-ARCX6/ros2_ws/src/parcbot_docking/src/mapped_tag_world_coordinates.yaml'
+        )
+        self.output_file = os.path.expanduser(self.get_parameter('output_file').value)
         
         # Timer to periodically check TF tree for tag positions (e.g., every 0.5 seconds)
         self.timer = self.create_timer(0.5, self.lookup_tag_transforms)
@@ -89,7 +91,7 @@ class TagWorldCoordinateLogger(Node):
     def save_coordinates(self):
         try:
             with open(self.output_file, 'w') as f:
-                json.dump(self.mapped_tags, f, indent=4)
+                yaml.safe_dump(self.mapped_tags, f, default_flow_style=False, sort_keys=False)
         except Exception as e:
             self.get_logger().error(f"Failed to save coordinates to file: {e}")
 
