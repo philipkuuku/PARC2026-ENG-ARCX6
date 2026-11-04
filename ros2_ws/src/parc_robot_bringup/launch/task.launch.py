@@ -9,7 +9,6 @@ from launch.actions import (
     ExecuteProcess,
     IncludeLaunchDescription,
     OpaqueFunction,
-    RegisterEventHandler,
     TimerAction,
 )
 
@@ -23,18 +22,38 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
 
     # Set the path to different files and folders
-    pkg_path = FindPackageShare(package="parc_robot_bringup").find("parc_robot_bringup")
-    pkg_description = FindPackageShare(package="parc_robot_description").find(
-        "parc_robot_description"
-    )
-    pkg_ros_gz_sim = FindPackageShare(package="ros_gz_sim").find("ros_gz_sim")
+    pkg_path = FindPackageShare(
+        package="parc_robot_bringup"
+    ).find("parc_robot_bringup")
+
+    pkg_description = FindPackageShare(
+        package="parc_robot_description"
+    ).find("parc_robot_description")
+
+    pkg_ros_gz_sim = FindPackageShare(
+        package="ros_gz_sim"
+    ).find("ros_gz_sim")
+
+    pkg_test_world = FindPackageShare(
+        package="parc_test_world"
+    ).find("parc_test_world")
 
     bridge_params = os.path.join(pkg_path, "config/gz_bridge.yaml")
     rviz_config_file = os.path.join(pkg_path, "rviz/task.rviz")
-    goal_location_sdf = os.path.join(pkg_path, "models/goal_location/model.sdf")
-    world_file = os.path.join(pkg_path, "worlds/task_world.sdf")
+
+    world_file = os.path.join(
+        pkg_test_world,
+        "worlds",
+        "test_arena.sdf",
+    )
+
+    # Add both model directories to Gazebo's resource search path
     set_env_vars_resources = AppendEnvironmentVariable(
-        "GZ_SIM_RESOURCE_PATH", os.path.join(pkg_path, "models")
+        "GZ_SIM_RESOURCE_PATH",
+        os.pathsep.join([
+            os.path.join(pkg_path, "models"),
+            os.path.join(pkg_test_world, "models"),
+        ])
     )
 
     # Launch configuration variables
@@ -50,94 +69,83 @@ def generate_launch_description():
     # Start robot state publisher
     start_robot_state_publisher_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            [os.path.join(pkg_description, "launch", "robot_state_publisher.launch.py")]
+            [
+                os.path.join(
+                    pkg_description,
+                    "launch",
+                    "robot_state_publisher.launch.py",
+                )
+            ]
         ),
         launch_arguments={"use_sim_time": use_sim_time}.items(),
     )
 
-    # Function to launch Gazebo and the SITO-E robot dependent on the world file chosen
+    # Launch Gazebo and spawn the SITO-E robot
     def spawn_gazebo_entities(context):
 
-        nonlocal world_file, goal_location_sdf
+        nonlocal world_file
 
-        # List of actions to be added to the launch description later
         actions = []
 
-        # Set path to the task 1 parameter yaml file
+        # Set path to the task parameter YAML file
         params_file = os.path.join(
             pkg_path,
             "config/task_params.yaml",
         )
 
-        # Open task 1 parameter yaml file
+        # Open task parameter YAML file
         if os.path.exists(params_file):
+
             with open(params_file, "r") as f:
                 params = yaml.safe_load(f)
 
-                spawn_x_val = str(params["/**"]["ros__parameters"]["x"])
-                spawn_y_val = str(params["/**"]["ros__parameters"]["y"])
-                spawn_z_val = str(params["/**"]["ros__parameters"]["z"])
-                spawn_yaw_val = str(params["/**"]["ros__parameters"]["yaw"])
-                goal_x_val = str(params["/**"]["ros__parameters"]["goal_x"])
-                goal_y_val = str(params["/**"]["ros__parameters"]["goal_y"])
-                goal_z_val = str(params["/**"]["ros__parameters"]["goal_z"])
+            spawn_x_val = str(params["/**"]["ros__parameters"]["x"])
+            spawn_y_val = str(params["/**"]["ros__parameters"]["y"])
+            spawn_z_val = str(params["/**"]["ros__parameters"]["z"])
+            spawn_yaw_val = str(params["/**"]["ros__parameters"]["yaw"])
 
-                # Launch Gazebo
-                actions.append(
-                    IncludeLaunchDescription(
-                        PythonLaunchDescriptionSource(
-                            [os.path.join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")]
-                        ),
-                        launch_arguments={
-                            "gz_args": ["-r -v4 ", world_file],
-                            "on_exit_shutdown": "true",
-                        }.items(),
-                    )
+        
+            # Launch Gazebo
+            actions.append(
+                IncludeLaunchDescription(
+                    PythonLaunchDescriptionSource(
+                        [
+                            os.path.join(
+                                pkg_ros_gz_sim,
+                                "launch",
+                                "gz_sim.launch.py",
+                            )
+                        ]
+                    ),
+                    launch_arguments={
+                        "gz_args": ["-r -v4 ", world_file],
+                        "on_exit_shutdown": "true",
+                    }.items(),
                 )
+            )
 
-                # Spawn SITO-E robot in Gazebo
-                actions.append(
-                    Node(
-                        package="ros_gz_sim",
-                        executable="create",
-                        output="screen",
-                        arguments=[
-                            "-topic",
-                            "robot_description",
-                            "-name",
-                            "sitoe_robot",
-                            "-x",
-                            spawn_x_val,
-                            "-y",
-                            spawn_y_val,
-                            "-z",
-                            spawn_z_val,
-                            "-Y",
-                            spawn_yaw_val,
-                        ],
-                    )
+            # Spawn SITO-E robot in Gazebo
+            actions.append(
+                Node(
+                    package="ros_gz_sim",
+                    executable="create",
+                    output="screen",
+                    arguments=[
+                        "-topic",
+                        "robot_description",
+                        "-name",
+                        "sitoe_robot",
+                        "-x",
+                        spawn_x_val,
+                        "-y",
+                        spawn_y_val,
+                        "-z",
+                        spawn_z_val,
+                        "-Y",
+                        spawn_yaw_val,
+                    ],
                 )
-
-                # Spawn goal location
-                actions.append(
-                    Node(
-                        package="ros_gz_sim",
-                        executable="create",
-                        output="screen",
-                        arguments=[
-                            "-file",
-                            goal_location_sdf,
-                            "-name",
-                            "goal_location",
-                            "-x",
-                            goal_x_val,
-                            "-y",
-                            goal_y_val,
-                            "-z",
-                            goal_z_val,
-                        ],
-                    )
-                )
+            )
 
         return actions
 
@@ -153,7 +161,7 @@ def generate_launch_description():
         output="screen",
     )
 
-    # Start Gazebo ROS Top Camera Color Image bridge
+    # Start Gazebo ROS top camera color image bridge
     start_gazebo_ros_top_camera_color_image_bridge_cmd = Node(
         package="ros_gz_image",
         namespace="top_camera",
@@ -162,7 +170,7 @@ def generate_launch_description():
         output="screen",
     )
 
-    # Start Gazebo ROS Bottom Camera Color Image bridge
+    # Start Gazebo ROS bottom camera color image bridge
     start_gazebo_ros_bottom_camera_color_image_bridge_cmd = Node(
         package="ros_gz_image",
         namespace="bottom_camera",
@@ -191,7 +199,8 @@ def generate_launch_description():
     )
 
     delayed_camera_adjustment = TimerAction(
-        period=7.0, actions=[set_gazebo_camera_view_cmd]  # Delay in seconds
+        period=7.0,
+        actions=[set_gazebo_camera_view_cmd],
     )
 
     # Launch RViz
@@ -203,17 +212,19 @@ def generate_launch_description():
         arguments=["-d", rviz_config_file],
     )
 
-    # Create the launch description and populate
+    # Create the launch description
     ld = LaunchDescription()
 
-    # Declare the launch options
+    # Declare launch options
     ld.add_action(declare_use_sim_time_cmd)
     ld.add_action(set_env_vars_resources)
 
-    # Add any actions
+    # Add launch actions
     ld.add_action(start_rviz_cmd)
     ld.add_action(delayed_camera_adjustment)
-    ld.add_action(OpaqueFunction(function=spawn_gazebo_entities))
+    ld.add_action(
+        OpaqueFunction(function=spawn_gazebo_entities)
+    )
     ld.add_action(start_robot_state_publisher_cmd)
     ld.add_action(start_gazebo_ros_bridge_cmd)
     ld.add_action(start_gazebo_ros_top_camera_color_image_bridge_cmd)

@@ -1,11 +1,12 @@
 /**:
   ros__parameters:
+    # Spawn the robot inside the current 5x5 arena.
+    x: -1.8
+    y: 0.0
+    z: 0.05
+    yaw: 0.0
 
-    x: -0.200546
-    y: -7.485170
-    z: 0.220794
-    yaw: 1.571
-
-    goal_x: -2.293350
-    goal_y: 2.232090
-    goal_z: 0.220042
+    # Legacy goal marker values kept for compatibility but no longer spawned.
+    goal_x: 0.0
+    goal_y: 0.0
+    goal_z: 0.0
