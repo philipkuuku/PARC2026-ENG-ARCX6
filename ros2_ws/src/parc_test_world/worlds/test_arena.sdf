@@ -51,10 +51,10 @@
           <geometry><plane><normal>0 0 1</normal><size>30 30</size></plane></geometry>
           <material><ambient>0.45 0.45 0.45 1</ambient><diffuse>0.45 0.45 0.45 1</diffuse><specular>0.1 0.1 0.1 1</specular></material>
         </visual>
-        <!-- Lighter floor inside the 5 x 5 m arena (visual only). -->
+        <!-- Lighter floor inside the 6 7 m arena (visual only). -->
         <visual name="arena_floor">
           <pose>0 0 0.001 0 0 0</pose>
-          <geometry><plane><normal>0 0 1</normal><size>5 5</size></plane></geometry>
+          <geometry><plane><normal>0 0 1</normal><size>6 7</size></plane></geometry>
           <material><ambient>0.82 0.8 0.76 1</ambient><diffuse>0.82 0.8 0.76 1</diffuse><specular>0.1 0.1 0.1 1</specular></material>
         </visual>
       </link>
@@ -64,39 +64,39 @@
       <static>true</static>
       <link name="link">
         <collision name="north_collision">
-          <pose>0 2.525 0.15 0 0 0</pose>
-          <geometry><box><size>5.1 0.05 0.3</size></box></geometry>
+          <pose>0 3.525 0.15 0 0 0</pose>
+          <geometry><box><size>6.1 0.05 0.3</size></box></geometry>
         </collision>
         <visual name="north_visual">
-          <pose>0 2.525 0.15 0 0 0</pose>
-          <geometry><box><size>5.1 0.05 0.3</size></box></geometry>
+          <pose>0 3.525 0.15 0 0 0</pose>
+          <geometry><box><size>6.1 0.05 0.3</size></box></geometry>
           <material><ambient>0.55 0.38 0.22 1</ambient><diffuse>0.55 0.38 0.22 1</diffuse><specular>0.1 0.1 0.1 1</specular></material>
         </visual>
         <collision name="south_collision">
-          <pose>0 -2.525 0.15 0 0 0</pose>
-          <geometry><box><size>5.1 0.05 0.3</size></box></geometry>
+          <pose>0 -3.525 0.15 0 0 0</pose>
+          <geometry><box><size>6.1 0.05 0.3</size></box></geometry>
         </collision>
         <visual name="south_visual">
-          <pose>0 -2.525 0.15 0 0 0</pose>
-          <geometry><box><size>5.1 0.05 0.3</size></box></geometry>
+          <pose>0 -3.525 0.15 0 0 0</pose>
+          <geometry><box><size>6.1 0.05 0.3</size></box></geometry>
           <material><ambient>0.55 0.38 0.22 1</ambient><diffuse>0.55 0.38 0.22 1</diffuse><specular>0.1 0.1 0.1 1</specular></material>
         </visual>
         <collision name="east_collision">
-          <pose>2.525 0 0.15 0 0 0</pose>
-          <geometry><box><size>0.05 5 0.3</size></box></geometry>
+          <pose>3.025 0 0.15 0 0 0</pose>
+          <geometry><box><size>0.05 7.1 0.3</size></box></geometry>
         </collision>
         <visual name="east_visual">
-          <pose>2.525 0 0.15 0 0 0</pose>
-          <geometry><box><size>0.05 5 0.3</size></box></geometry>
+          <pose>3.025 0 0.15 0 0 0</pose>
+          <geometry><box><size>0.05 7.1 0.3</size></box></geometry>
           <material><ambient>0.55 0.38 0.22 1</ambient><diffuse>0.55 0.38 0.22 1</diffuse><specular>0.1 0.1 0.1 1</specular></material>
         </visual>
         <collision name="west_collision">
-          <pose>-2.525 0 0.15 0 0 0</pose>
-          <geometry><box><size>0.05 5 0.3</size></box></geometry>
+          <pose>-3.025 0 0.15 0 0 0</pose>
+          <geometry><box><size>0.05 7.1 0.3</size></box></geometry>
         </collision>
         <visual name="west_visual">
-          <pose>-2.525 0 0.15 0 0 0</pose>
-          <geometry><box><size>0.05 5 0.3</size></box></geometry>
+          <pose>-3.025 0 0.15 0 0 0</pose>
+          <geometry><box><size>0.05 7.1 0.3</size></box></geometry>
           <material><ambient>0.55 0.38 0.22 1</ambient><diffuse>0.55 0.38 0.22 1</diffuse><specular>0.1 0.1 0.1 1</specular></material>
         </visual>
       </link>

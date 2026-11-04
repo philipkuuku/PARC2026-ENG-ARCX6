@@ -1,4 +1,4 @@
-# Parameters for the 5 x 5 m test arena.
+# Parameters for the test arena.
 #
 # This file is the single source of truth for the generated world. After editing
 # it, regenerate the world and models, then rebuild:
@@ -7,12 +7,13 @@
 #   colcon build --packages-select parc_test_world
 #
 # All units are metres / radians. The arena is centred on the world origin, so
-# its inner edges are at x, y = +/- arena.size / 2.
+# its inner edges are at x = +/- arena.size_x / 2 and y = +/- arena.size_y / 2.
 # Dimensions marked "eyeballed" are estimates of the real environment - measure
 # and update them when you can.
 
 arena:
-  size: 5.0                 # inner side length of the square arena
+  size_x: 6.0               # inner width of the rectangular arena
+  size_y: 7.0               # inner height of the rectangular arena
   barrier_height: 0.30      # eyeballed: low border around the arena
   barrier_thickness: 0.05
 

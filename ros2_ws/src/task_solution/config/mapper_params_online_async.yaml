@@ -21,7 +21,7 @@ slam_toolbox:
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    map_file_name: /home/eyiram-gaze/PARC2026-ENG-ARCX6/ros2_ws/src/maps/oct5_jac_map_save_edited
+    map_file_name: /home/philip/Desktop/ARC_LAB/PARC2026-ENG-ARCX6/test_map_nov4_save #/home/eyiram-gaze/PARC2026-ENG-ARCX6/ros2_ws/src/maps/oct5_jac_map_save_edited
     # map_start_pose: [0.0, 0.0, 0.0]
     map_start_at_dock: true
 

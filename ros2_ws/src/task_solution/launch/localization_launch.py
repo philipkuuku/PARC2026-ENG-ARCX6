@@ -77,7 +77,7 @@ def generate_launch_description():
     default_value=os.path.join(
         bringup_dir,
         'maps',
-        'oct5_jac_map_save_edited.yaml'
+        'test_map_nov4_save.yaml'
     ),
     description='Full path to map yaml file to load'
 )

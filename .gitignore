@@ -3,6 +3,10 @@ ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
 
+/home/philip/Desktop/ARC_LAB/PARC2026-ENG-ARCX6/build
+/home/philip/Desktop/ARC_LAB/PARC2026-ENG-ARCX6/install
+/home/philip/Desktop/ARC_LAB/PARC2026-ENG-ARCX6/log
+
 # Python
 __pycache__/
 *.pyc
