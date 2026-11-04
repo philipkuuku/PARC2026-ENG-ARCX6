@@ -1,0 +1,61 @@
+# Parameters for the 5 x 5 m test arena.
+#
+# This file is the single source of truth for the generated world. After editing
+# it, regenerate the world and models, then rebuild:
+#
+#   python3 parc_test_world/scripts/generate_world.py
+#   colcon build --packages-select parc_test_world
+#
+# All units are metres / radians. The arena is centred on the world origin, so
+# its inner edges are at x, y = +/- arena.size / 2.
+# Dimensions marked "eyeballed" are estimates of the real environment - measure
+# and update them when you can.
+
+arena:
+  size: 5.0                 # inner side length of the square arena
+  barrier_height: 0.30      # eyeballed: low border around the arena
+  barrier_thickness: 0.05
+
+apriltag:
+  family: tag36h11
+  tag_size: 0.165           # edge length of the BLACK square (what apriltag_ros calls "size")
+  # The printed tag includes a 1-cell white margin, so the full printed square is
+  # tag_size * 10 / 8 = 0.206 m for the value above.
+
+pole:
+  diameter: 0.06            # eyeballed
+  height: 1.50              # eyeballed
+  base_diameter: 0.35       # eyeballed: weighted round base the pole stands on
+  base_height: 0.03
+  tag_center_height: 1.00   # eyeballed: height of the tag centre above the floor
+  plate_thickness: 0.005    # backing plate the tag is stuck to
+
+# One tag per pole. The tag faces the arena centre unless "yaw" is given
+# (yaw = direction the tag faces, measured from +x).
+poles:
+  - {id: 0, x:  2.0, y:  2.0}
+  - {id: 1, x: -2.0, y:  2.0}
+  - {id: 2, x: -2.0, y: -2.0}
+  - {id: 3, x:  2.0, y: -2.0}
+
+# Tables use the cafe_table model (0.91 m square top, 0.78 m tall).
+tables:
+  - {name: table_a, x: -1.0, y:  0.9, yaw: 0.0}
+  - {name: table_b, x:  1.0, y: -0.9, yaw: 0.0}
+
+# Chairs use the WoodenChair model. If "face" is set to a table name, the chair is
+# turned to face that table and "yaw" is ignored.
+chairs:
+  - {name: chair_a1, x: -1.75, y:  0.90, face: table_a}
+  - {name: chair_a2, x: -1.00, y:  1.65, face: table_a}
+  - {name: chair_a3, x: -0.25, y:  0.90, face: table_a}
+  - {name: chair_b1, x:  1.75, y: -0.90, face: table_b}
+  - {name: chair_b2, x:  1.00, y: -1.65, face: table_b}
+  - {name: chair_b3, x:  0.25, y: -0.90, face: table_b}
+
+# Default robot spawn pose (can be overridden with launch arguments).
+spawn:
+  x: -1.8
+  y: 0.0
+  z: 0.05
+  yaw: 0.0
