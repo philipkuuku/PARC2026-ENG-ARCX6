@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 import json
 import os
+from ament_index_python.packages import get_package_share_directory
 
 from tf2_ros import Buffer, TransformListener
 from tf2_ros import LookupException, ConnectivityException, ExtrapolationException
@@ -21,7 +22,8 @@ class TagWorldCoordinateLogger(Node):
         self.mapped_tags = {}
         
         # Save directly inside your package's src directory
-        self.output_file = '/home/eyiram-gaze/PARC2026-ENG-ARCX6/ros2_ws/src/parcbot_docking/src/mapped_tag_world_coordinates.json'
+        package_share = get_package_share_directory('parcbot_docking')  
+        self.output_file = os.path.join(package_share, 'src', 'mapped_tag_world_coordinates.json')
         
         # Timer to periodically check TF tree for tag positions (e.g., every 0.5 seconds)
         self.timer = self.create_timer(0.5, self.lookup_tag_transforms)

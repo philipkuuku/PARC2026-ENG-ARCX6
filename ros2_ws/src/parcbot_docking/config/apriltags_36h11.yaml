@@ -10,9 +10,9 @@
       refine: true
 
     tag:
-      ids:    [0, 4, 7, 9]
-      frames: [tag_0, tag_1, tag_2, tag_3]
-      sizes:  [0.15, 0.165, 0.165, 0.165]
+      ids:    [0, 1, 4, 7, 9]
+      frames: [tag_0, tag_1, tag_4, tag_7, tag_9]
+      sizes:  [0.165, 0.165, 0.165, 0.165, 0.165]
 
 
 # /**:
