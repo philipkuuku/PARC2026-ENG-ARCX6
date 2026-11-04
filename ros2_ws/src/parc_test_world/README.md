@@ -1,7 +1,7 @@
 # parc_test_world
 
-A 5 x 5 m test arena for the CAYTU SITO-E robot that mimics the real test environment:
-two cafe tables with three chairs each, four poles with AprilTags (`tag36h11`, IDs 1, 4, 7, 9 as used by the referee)
+A 6 x 7 m test arena for the CAYTU SITO-E robot that mimics the real test environment:
+two cafe tables with three chairs tucked in at each, four poles with AprilTags (`tag36h11`, IDs 1, 4, 7, 9 as used by the referee)
 in the corners facing the centre, and a low barrier around the edge.
 
 ## Launch
@@ -25,11 +25,11 @@ from `parc_robot_bringup`, so topics are the same as in the task world.
 
 ## Layout
 
-The arena is centred on the world origin (inner edges at x, y = ±2.5 m).
+The arena is centred on the world origin (inner edges at x = ±3.0 m, y = ±3.5 m).
 
 ```
  y
- ^   T4 (-2, 2)                      T1 (2, 2)
+ ^   T4 (-2.5, 3)                    T1 (2.5, 3)
  |        chair
  |  chair [table_a] chair
  |         (-1, 0.9)
@@ -37,7 +37,7 @@ The arena is centred on the world origin (inner edges at x, y = ±2.5 m).
  |                       chair [table_b] chair
  |                              (1, -0.9)
  |                               chair
- |   T7 (-2, -2)                     T9 (2, -2)
+ |   T7 (-2.5, -3)                   T9 (2.5, -3)
  +-------------------------------------------> x
 ```
 

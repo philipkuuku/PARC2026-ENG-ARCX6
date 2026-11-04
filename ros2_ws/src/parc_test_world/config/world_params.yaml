@@ -36,10 +36,10 @@ pole:
 # One tag per pole. IDs match the PARC 2026 referee (1, 4, 7, 9). The tag faces the arena centre unless "yaw" is given
 # (yaw = direction the tag faces, measured from +x).
 poles:
-  - {id: 1, x:  2.0, y:  2.0}
-  - {id: 4, x: -2.0, y:  2.0}
-  - {id: 7, x: -2.0, y: -2.0}
-  - {id: 9, x:  2.0, y: -2.0}
+  - {id: 1, x:  2.5, y:  3.0}
+  - {id: 4, x: -2.5, y:  3.0}
+  - {id: 7, x: -2.5, y: -3.0}
+  - {id: 9, x:  2.5, y: -3.0}
 
 # Tables use the cafe_table model (0.91 m square top, 0.78 m tall).
 tables:
@@ -48,13 +48,15 @@ tables:
 
 # Chairs use the WoodenChair model. If "face" is set to a table name, the chair is
 # turned to face that table and "yaw" is ignored.
+# Chairs are tucked in 0.50 m from the table centre: the seat front sits ~13 cm
+# under the tabletop, the backrest (0.79 m tall) stays outside the table edge.
 chairs:
-  - {name: chair_a1, x: -1.75, y:  0.90, face: table_a}
-  - {name: chair_a2, x: -1.00, y:  1.65, face: table_a}
-  - {name: chair_a3, x: -0.25, y:  0.90, face: table_a}
-  - {name: chair_b1, x:  1.75, y: -0.90, face: table_b}
-  - {name: chair_b2, x:  1.00, y: -1.65, face: table_b}
-  - {name: chair_b3, x:  0.25, y: -0.90, face: table_b}
+  - {name: chair_a1, x: -1.50, y:  0.90, face: table_a}
+  - {name: chair_a2, x: -1.00, y:  1.40, face: table_a}
+  - {name: chair_a3, x: -0.50, y:  0.90, face: table_a}
+  - {name: chair_b1, x:  1.50, y: -0.90, face: table_b}
+  - {name: chair_b2, x:  1.00, y: -1.40, face: table_b}
+  - {name: chair_b3, x:  0.50, y: -0.90, face: table_b}
 
 # Default robot spawn pose (can be overridden with launch arguments).
 spawn:

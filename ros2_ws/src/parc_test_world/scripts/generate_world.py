@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the 5 x 5 m test arena world and AprilTag pole models.
+"""Generate the 6 x 7 m test arena world and AprilTag pole models.
 
 Reads config/world_params.yaml and writes, inside this package's source tree:
 

@@ -4,22 +4,22 @@ family: tag36h11
 size: 0.165
 tags:
 - id: 1
-  x: 1.9749
-  y: 1.9749
+  x: 2.4773
+  y: 2.9727
   z: 1.0
-  facing_yaw: -2.3562
+  facing_yaw: -2.2655
 - id: 4
-  x: -1.9749
-  y: 1.9749
+  x: -2.4773
+  y: 2.9727
   z: 1.0
-  facing_yaw: -0.7854
+  facing_yaw: -0.8761
 - id: 7
-  x: -1.9749
-  y: -1.9749
+  x: -2.4773
+  y: -2.9727
   z: 1.0
-  facing_yaw: 0.7854
+  facing_yaw: 0.8761
 - id: 9
-  x: 1.9749
-  y: -1.9749
+  x: 2.4773
+  y: -2.9727
   z: 1.0
-  facing_yaw: 2.3562
+  facing_yaw: 2.2655
